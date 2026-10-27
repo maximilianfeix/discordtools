@@ -1,0 +1,32 @@
+---
+import Icon from "./Icon";
+import { t, type Lang } from "../i18n/ui";
+import { toolPath, type Tool } from "../tools/registry";
+interface Props { tool: Tool; lang: Lang }
+const { tool, lang } = Astro.props;
+---
+<a class="tool-card" href={toolPath(tool, lang)} data-tool={tool.id}>
+  <span class="tc-icon"><Icon name={tool.icon} size={20} /></span>
+  <span class="tc-body">
+    <span class="tc-name">
+      {tool.name[lang]}
+      {tool.isNew && <span class="tc-badge">{t(lang, "tool.new")}</span>}
+    </span>
+    <span class="tc-short">{tool.short[lang]}</span>
+  </span>
+</a>
+<style>
+  .tool-card {
+    display: flex; gap: 14px; align-items: flex-start; padding: 16px; min-height: 100%;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+    color: var(--text); text-decoration: none;
+    transition: border-color 0.15s var(--ease), background 0.15s var(--ease), transform 0.15s var(--ease);
+  }
+  .tool-card:hover { border-color: var(--border-strong); background: var(--surface-2); color: var(--text); }
+  .tool-card:hover .tc-icon { color: var(--accent); }
+  .tc-icon { width: 40px; height: 40px; flex: none; display: grid; place-items: center; border-radius: 11px; background: var(--surface-2); color: var(--muted); border: 1px solid var(--border); transition: color 0.15s; }
+  .tc-body { display: grid; gap: 3px; min-width: 0; }
+  .tc-name { font-weight: 640; font-size: 0.98rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .tc-short { color: var(--muted); font-size: 0.875rem; line-height: 1.45; }
+  .tc-badge { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent-contrast); background: var(--accent); border-radius: 5px; padding: 1px 6px; }
+</style>

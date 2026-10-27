@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-labelledby="title desc">
+<title id="title">discordtools</title>
+<desc id="desc">Mint command bubble on a dark rounded square.</desc>
+<rect width="32" height="32" rx="8" fill="#111214"/><path transform="translate(0 0) scale(0.0625)" fill="#3EE0A8" fill-rule="evenodd" d="M152 64H360C409 64 448 103 448 152V296C448 345 409 384 360 384H192L88 448V362C73 346 64 322 64 296V152C64 103 103 64 152 64ZM278 144L182 304H234L330 144Z"/>
+</svg>

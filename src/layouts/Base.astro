@@ -1,0 +1,68 @@
+---
+import "../styles/global.css";
+import "../styles/palette.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { t, type Lang } from "../i18n/ui";
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** Path of this page in German and English, e.g. { de: "/zeitstempel", en: "/en/timestamp" } */
+  paths: Record<Lang, string>;
+  jsonLd?: unknown[];
+  noindex?: boolean;
+}
+const { lang, title, description, paths, jsonLd = [], noindex = false } = Astro.props;
+const site = "https://discordtools.de";
+const canonical = site + (paths[lang] === "/" ? "/" : paths[lang]);
+const other: Lang = lang === "de" ? "en" : "de";
+const ogImage = `${site}/og.png`;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="de" href={site + paths.de} />
+    <link rel="alternate" hreflang="en" href={site + paths.en} />
+    <link rel="alternate" hreflang="x-default" href={site + paths.de} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="discordtools.de" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:locale" content={lang === "de" ? "de_DE" : "en_US"} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script is:inline>
+      try {
+        const saved = localStorage.getItem("dt-theme");
+        if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script>
+    {jsonLd.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t(lang, "skip")}</a>
+    <Header lang={lang} altHref={paths[other]} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+    <div id="toast-root" aria-live="polite" aria-atomic="true" class="toast-root"></div>
+  </body>
+</html>

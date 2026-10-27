@@ -1,0 +1,53 @@
+---
+import Logo from "./Logo.astro";
+import { t, localePath, GITHUB_URL, type Lang } from "../i18n/ui";
+import { CATEGORIES, toolsIn, toolPath } from "../tools/registry";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <Logo href={localePath(lang, "/")} label="discordtools.de" />
+        <p>{t(lang, "site.tagline")}</p>
+      </div>
+      <nav class="cols" aria-label={t(lang, "nav.tools")}>
+        {CATEGORIES.map((c) => (
+          <div>
+            <h2>{c.name[lang]}</h2>
+            <ul>
+              {toolsIn(c.id).map((tool) => <li><a href={toolPath(tool, lang)}>{tool.name[lang]}</a></li>)}
+            </ul>
+          </div>
+        ))}
+      </nav>
+    </div>
+    <div class="bottom">
+      <p class="disclaimer">{t(lang, "footer.disclaimer")}</p>
+      <ul class="legal">
+        <li><a href={lang === "de" ? "/impressum" : "/en/imprint"}>{t(lang, "footer.imprint")}</a></li>
+        <li><a href={lang === "de" ? "/datenschutz" : "/en/privacy"}>{t(lang, "footer.privacy")}</a></li>
+        <li><a href={GITHUB_URL} rel="noopener">{t(lang, "footer.source")}</a></li>
+        <li><span>© {year} discordtools.de</span></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<style>
+  .site-footer { margin-top: 80px; border-top: 1px solid var(--border); background: var(--bg-elev); padding: 48px 0 32px; }
+  .top { display: grid; gap: 32px; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 900px) { .top { grid-template-columns: 260px minmax(0, 1fr); } }
+  .brand p { color: var(--muted); font-size: 0.9rem; margin-top: 12px; max-width: 30ch; }
+  .cols { display: grid; gap: 24px 20px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  h2 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--faint); font-weight: 650; margin-bottom: 10px; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .cols a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+  .cols a:hover { color: var(--text); }
+  .bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); display: grid; gap: 12px; }
+  .disclaimer { color: var(--faint); font-size: 0.8rem; max-width: 80ch; margin: 0; }
+  .legal { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.85rem; }
+  .legal a, .legal span { color: var(--muted); text-decoration: none; }
+  .legal a:hover { color: var(--text); text-decoration: underline; }
+</style>

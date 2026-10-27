@@ -1,0 +1,154 @@
+---
+import Base from "./Base.astro";
+import ToolMount from "../components/ToolMount.astro";
+import ToolActions from "../components/ToolActions";
+import Icon from "../components/Icon";
+import Prose from "../components/Prose.astro";
+import ToolCard from "../components/ToolCard.astro";
+import { t, localePath, type Lang } from "../i18n/ui";
+import { CATEGORIES, TOOLS, toolPath, type Tool } from "../tools/registry";
+import { contentFor } from "../content";
+
+interface Props { tool: Tool; lang: Lang }
+const { tool, lang } = Astro.props;
+const content = contentFor(tool.id)?.[lang];
+const category = CATEGORIES.find((c) => c.id === tool.category)!;
+const name = tool.name[lang];
+const title = `${content?.title ?? name} · discordtools.de`;
+const description = content?.description ?? tool.short[lang];
+const related = TOOLS.filter((x) => x.category === tool.category && x.id !== tool.id).slice(0, 3);
+const paths = { de: toolPath(tool, "de"), en: toolPath(tool, "en") };
+const site = "https://discordtools.de";
+const jsonLd: unknown[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name,
+    description,
+    url: site + paths[lang],
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Any",
+    browserRequirements: "Requires JavaScript",
+    inLanguage: lang,
+    isAccessibleForFree: true,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "discordtools.de", item: site + localePath(lang, "/") },
+      { "@type": "ListItem", position: 2, name: category.name[lang], item: site + localePath(lang, "/") + `#${category.id}` },
+      { "@type": "ListItem", position: 3, name, item: site + paths[lang] },
+    ],
+  },
+];
+if (content?.faq.length) {
+  jsonLd.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a.replace(/`/g, "") } })),
+  });
+}
+---
+<Base lang={lang} title={title} description={description} paths={paths} jsonLd={jsonLd}>
+  <div class="wrap tool-page">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href={localePath(lang, "/")}>{lang === "de" ? "Start" : "Home"}</a>
+      <Icon name="ChevronRight" size={14} />
+      <a href={localePath(lang, "/") + `#${category.id}`}>{category.name[lang]}</a>
+    </nav>
+    <header class="tool-head">
+      <div class="tool-title">
+        <span class="tool-icon"><Icon name={tool.icon} size={22} /></span>
+        <div>
+          <h1>{content?.h1 ?? name}</h1>
+          <p class="lead"><Prose text={content?.lead ?? tool.short[lang]} /></p>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span class="chip privacy">
+          <Icon name={tool.local ? "Lock" : "Globe"} size={14} />
+          {tool.local ? t(lang, "tool.local") : t(lang, "tool.server")}
+        </span>
+        <ToolActions client:idle id={tool.id} lang={lang} />
+      </div>
+    </header>
+
+    <section class="tool-app" aria-label={name}>
+      <ToolMount id={tool.id} lang={lang} />
+      <noscript><p class="notice">{lang === "de" ? "Dieses Tool braucht JavaScript." : "This tool needs JavaScript."}</p></noscript>
+    </section>
+
+    {content && (
+      <div class="tool-docs">
+        <section class="docs-block">
+          <h2>{t(lang, "tool.howto")}</h2>
+          <ol class="steps">
+            {content.steps.map((s) => <li><Prose text={s} /></li>)}
+          </ol>
+          {content.about?.map((p) => <p><Prose text={p} /></p>)}
+        </section>
+        {content.faq.length > 0 && (
+          <section class="docs-block">
+            <h2>{t(lang, "tool.faq")}</h2>
+            <div class="faq">
+              {content.faq.map((f) => (
+                <details>
+                  <summary>{f.q}</summary>
+                  <p><Prose text={f.a} /></p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+    )}
+
+    {related.length > 0 && (
+      <section class="related">
+        <h2>{t(lang, "tool.related")}</h2>
+        <div class="card-grid">
+          {related.map((r) => <ToolCard tool={r} lang={lang} />)}
+        </div>
+      </section>
+    )}
+  </div>
+</Base>
+<style>
+  .tool-page { padding-top: 20px; }
+  .crumbs { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--faint); margin-bottom: 18px; flex-wrap: wrap; }
+  .crumbs a { color: var(--muted); text-decoration: none; }
+  .crumbs a:hover { color: var(--text); text-decoration: underline; }
+  .tool-head { display: grid; gap: 16px; margin-bottom: 24px; }
+  @media (min-width: 900px) { .tool-head { grid-template-columns: minmax(0, 1fr) auto; align-items: end; } }
+  .tool-title { display: flex; gap: 16px; align-items: flex-start; }
+  .tool-icon { width: 48px; height: 48px; flex: none; display: grid; place-items: center; border-radius: 13px; background: var(--accent-soft); color: var(--accent); margin-top: 4px; }
+  .tool-title h1 { margin-bottom: 6px; }
+  .lead { color: var(--muted); font-size: 1.05rem; margin: 0; max-width: 62ch; }
+  .tool-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .privacy { color: var(--accent); background: var(--accent-soft); border-color: transparent; }
+  @media (max-width: 560px) {
+    .tool-icon { width: 40px; height: 40px; border-radius: 11px; }
+    .tool-title { gap: 12px; }
+  }
+  .tool-docs { display: grid; gap: 32px; margin-top: 56px; max-width: 820px; }
+  .docs-block h2 { margin-bottom: 14px; }
+  .steps { margin: 0 0 16px; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+  .steps li { counter-increment: s; display: flex; gap: 12px; color: var(--muted); }
+  .steps li::before {
+    content: counter(s); flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--surface-2); border: 1px solid var(--border); color: var(--text); font-size: 0.8rem; font-weight: 650;
+  }
+  .docs-block > p { color: var(--muted); }
+  .faq { display: grid; gap: 8px; }
+  details { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); }
+  summary { cursor: pointer; padding: 14px 16px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--faint); font-weight: 400; font-size: 1.2rem; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { padding: 0 16px 14px; margin: 0; color: var(--muted); }
+  .related { margin-top: 56px; }
+  :global(.is-fav) { color: var(--warning); }
+  :global(.is-fav svg) { fill: currentColor; }
+</style>

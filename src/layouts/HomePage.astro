@@ -1,0 +1,171 @@
+---
+import Base from "./Base.astro";
+import ToolCard from "../components/ToolCard.astro";
+import Icon from "../components/Icon";
+import HomeFavorites from "../components/HomeFavorites";
+import SearchButton from "../components/SearchButton";
+import { t, GITHUB_URL, type Lang } from "../i18n/ui";
+import { CATEGORIES, TOOLS, toolsIn, toolPath } from "../tools/registry";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const popular = TOOLS.filter((x) => x.popular);
+const quickItems = TOOLS.map((x) => ({ id: x.id, name: x.name[lang], href: toolPath(x, lang), icon: x.icon }));
+const site = "https://discordtools.de";
+const title = lang === "de" ? "Discord Tools – kostenlos & ohne Anmeldung · discordtools.de" : "Free Discord Tools – no sign-up · discordtools.de";
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "WebSite", name: "discordtools.de", url: site + (lang === "de" ? "/" : "/en"), inLanguage: lang },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: TOOLS.map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name[lang], url: site + toolPath(x, lang) })),
+  },
+];
+const why = [
+  { icon: "Lock", k: "private" },
+  { icon: "Zap", k: "fast" },
+  { icon: "RefreshCw", k: "current" },
+  { icon: "Code", k: "open" },
+] as const;
+const sample = 1793563200; // 2026-10-31 20:00 CET
+---
+<Base lang={lang} title={title} description={t(lang, "site.description")} paths={{ de: "/", en: "/en" }} jsonLd={jsonLd}>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span>{TOOLS.length} {lang === "de" ? "Tools · kostenlos · ohne Tracking" : "tools · free · no tracking"}</p>
+        <h1>{t(lang, "home.title")}</h1>
+        <p class="hero-lead">{t(lang, "home.lead")}</p>
+        <SearchButton client:idle label={t(lang, "nav.search")} placeholder={t(lang, "search.placeholder")} />
+        <HomeFavorites client:idle items={quickItems} labels={{ favorites: t(lang, "search.favorites"), recent: t(lang, "search.recent") }} />
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="chat">
+          <div class="msg">
+            <span class="av"></span>
+            <div>
+              <div class="who">Moderator <span class="time">{lang === "de" ? "Heute um 18:02" : "Today at 6:02 PM"}</span></div>
+              <div class="text">{lang === "de" ? "Turnier startet" : "Tournament starts"} <span class="ts">{lang === "de" ? "Samstag, 31. Oktober 2026 um 20:00" : "Saturday, October 31, 2026 at 8:00 PM"}</span> 🎃</div>
+              <div class="text sub">{lang === "de" ? "in 4 Tagen" : "in 4 days"} · <code>&lt;t:{sample}:R&gt;</code></div>
+            </div>
+          </div>
+          <div class="msg">
+            <span class="av b"></span>
+            <div>
+              <div class="who">Event Bot <span class="tag">APP</span></div>
+              <div class="embed">
+                <div class="e-title">{lang === "de" ? "📢 Anmeldung offen" : "📢 Sign-ups open"}</div>
+                <div class="e-desc">{lang === "de" ? "Reagiere mit ✅, um dabei zu sein." : "React with ✅ to join."}</div>
+                <div class="e-fields"><span><b>Teams</b>16</span><span><b>{lang === "de" ? "Preis" : "Prize"}</b>Nitro</span><span><b>Mode</b>5v5</span></div>
+              </div>
+            </div>
+          </div>
+          <pre class="ansi"><span class="r">■ RED</span> <span class="g">■ GREEN</span> <span class="y">■ GOLD</span> <span class="bl">■ BLUE</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <h2 class="section-title">{t(lang, "home.popular")}</h2>
+    <div class="card-grid">
+      {popular.map((tool) => <ToolCard tool={tool} lang={lang} />)}
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <h2 class="section-title">{t(lang, "home.allCategories")}</h2>
+    <nav class="cat-nav" aria-label={t(lang, "home.allCategories")}>
+      {CATEGORIES.map((c) => <a class="chip" href={`#${c.id}`}>{c.name[lang]}</a>)}
+    </nav>
+    {CATEGORIES.map((c) => (
+      <div class="category" id={c.id}>
+        <div class="cat-head">
+          <h3>{c.name[lang]}</h3>
+          <p>{c.blurb[lang]}</p>
+        </div>
+        <div class="card-grid">
+          {toolsIn(c.id).map((tool) => <ToolCard tool={tool} lang={lang} />)}
+        </div>
+      </div>
+    ))}
+  </section>
+
+  <section class="wrap section why">
+    <h2 class="section-title">{t(lang, "home.why.title")}</h2>
+    <div class="why-grid">
+      {why.map((w) => (
+        <div class="why-item">
+          <span class="why-icon"><Icon name={w.icon} size={20} /></span>
+          <h3>{t(lang, `home.why.${w.k}.title` as any)}</h3>
+          <p>{t(lang, `home.why.${w.k}.text` as any)}</p>
+        </div>
+      ))}
+    </div>
+    <p class="gh-line"><a href={GITHUB_URL} rel="noopener"><Icon name="Github" size={16} /> github.com/maximilianfeix/discordtools</a></p>
+  </section>
+</Base>
+<style>
+  .hero { padding: clamp(36px, 7vw, 88px) 0 clamp(28px, 5vw, 56px); border-bottom: 1px solid var(--border); background:
+    radial-gradient(900px 400px at 85% -10%, var(--accent-soft), transparent 70%); }
+  .hero-grid { display: grid; gap: 40px; align-items: center; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 1000px) { .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); } }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 560; color: var(--muted); margin-bottom: 18px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+  .hero h1 { font-size: clamp(2.2rem, 1.4rem + 3.4vw, 3.6rem); letter-spacing: -0.035em; line-height: 1.02; max-width: 14ch; }
+  .hero-lead { font-size: clamp(1.02rem, 0.95rem + 0.3vw, 1.18rem); color: var(--muted); max-width: 52ch; margin-bottom: 28px; }
+  :global(.hero-search) {
+    display: flex; align-items: center; gap: 12px; width: 100%; max-width: 520px; height: 56px; padding: 0 12px 0 18px;
+    font: inherit; font-size: 1rem; color: var(--faint); background: var(--surface); border: 1px solid var(--border-strong);
+    border-radius: var(--r-lg); cursor: text; text-align: left; box-shadow: var(--shadow);
+  }
+  :global(.hero-search:hover) { border-color: var(--accent); }
+  :global(.hero-search span) { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  :global(.hero-search kbd) { font-size: 0.8rem; padding: 2px 8px; border-radius: 6px; border: 1px solid var(--border); color: var(--faint); background: var(--surface-2); }
+  @media (pointer: coarse) { :global(.hero-search kbd) { display: none; } }
+  :global(.home-quick) { display: grid; gap: 10px; margin-top: 18px; }
+  :global(.hq-group) { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  :global(.hq-title) { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--faint); font-weight: 600; }
+  :global(.hq-list) { display: flex; gap: 6px; flex-wrap: wrap; }
+  :global(.hq-chip) { text-decoration: none; color: var(--text); min-height: 32px; }
+  :global(.hq-chip:hover) { border-color: var(--border-strong); color: var(--text); }
+
+  .hero-art { display: none; }
+  @media (min-width: 1000px) { .hero-art { display: block; } }
+  .chat { background: #1a1a1e; color: #efeff1; border: 1px solid var(--border); border-radius: var(--r-xl); padding: 22px 20px; font-family: "Noto Sans", system-ui, sans-serif; font-size: 15px; line-height: 1.4; box-shadow: var(--shadow); transform: rotate(0.6deg); }
+  .msg { display: flex; gap: 14px; }
+  .msg + .msg { margin-top: 18px; }
+  .av { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #f5b84a, #ff7b72); flex: none; }
+  .av.b { background: #3ee0a8; }
+  .who { font-weight: 600; color: #fbfbfb; display: flex; align-items: center; gap: 6px; }
+  .time { font-size: 12px; color: #96979e; font-weight: 400; }
+  .tag { background: #5865f2; color: #fff; font-size: 10px; border-radius: 3px; padding: 0 4px; line-height: 15px; }
+  .ts { background: rgb(151 151 159 / 0.14); border-radius: 3px; padding: 0 3px; }
+  .sub { color: #96979e; font-size: 13px; margin-top: 2px; }
+  .sub code { font-size: 12px; color: #abacb2; }
+  .embed { margin-top: 6px; background: #242429; border-left: 4px solid #3ee0a8; border-radius: 4px; padding: 10px 14px 12px; max-width: 360px; }
+  .e-title { font-weight: 600; color: #fbfbfb; }
+  .e-desc { font-size: 14px; margin-top: 4px; }
+  .e-fields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; font-size: 14px; }
+  .e-fields b { display: block; font-weight: 600; color: #fbfbfb; }
+  .ansi { margin: 18px 0 0; padding: 10px 12px; border-radius: 4px; background: rgb(92 107 240 / 0.08); border: 1px solid rgb(151 151 159 / 0.2); font-size: 13px; }
+  .r { color: #dc322f; } .g { color: #859900; } .y { color: #b58900; } .bl { color: #268bd2; }
+
+  .section { padding-top: clamp(40px, 6vw, 64px); }
+  .section-title { margin-bottom: 18px; }
+  .cat-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .cat-nav a { text-decoration: none; min-height: 34px; }
+  .cat-nav a:hover { color: var(--text); border-color: var(--border-strong); }
+  .category { padding-top: 32px; scroll-margin-top: calc(var(--header-h) + 12px); }
+  .cat-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-bottom: 12px; }
+  .cat-head h3 { margin: 0; font-size: 1.1rem; }
+  .cat-head p { margin: 0; color: var(--faint); font-size: 0.9rem; }
+  .why-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+  .why-item { padding: 20px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); }
+  .why-icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 11px; background: var(--accent-soft); color: var(--accent); margin-bottom: 14px; }
+  .why-item h3 { margin-bottom: 6px; }
+  .why-item p { color: var(--muted); font-size: 0.92rem; margin: 0; }
+  .gh-line { margin-top: 18px; }
+  .gh-line a { display: inline-flex; gap: 8px; align-items: center; color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+  .gh-line a:hover { color: var(--text); }
+</style>

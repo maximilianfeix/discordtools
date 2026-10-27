@@ -1,0 +1,87 @@
+---
+import Logo from "./Logo.astro";
+import Icon from "./Icon";
+import SearchPalette from "./SearchPalette";
+import { t, localePath, GITHUB_URL, type Lang } from "../i18n/ui";
+import { TOOLS, CATEGORIES } from "../tools/registry";
+
+interface Props { lang: Lang; altHref: string }
+const { lang, altHref } = Astro.props;
+const searchItems = TOOLS.map((tool) => ({
+  id: tool.id,
+  icon: tool.icon,
+  name: tool.name[lang],
+  short: tool.short[lang],
+  href: lang === "de" ? `/${tool.slug.de}` : `/en/${tool.slug.en}`,
+  category: CATEGORIES.find((c) => c.id === tool.category)!.name[lang],
+  terms: [tool.name.de, tool.name.en, ...tool.keywords].join(" ").toLowerCase(),
+}));
+const strings = {
+  placeholder: t(lang, "search.placeholder"),
+  empty: t(lang, "search.empty"),
+  recent: t(lang, "search.recent"),
+  favorites: t(lang, "search.favorites"),
+  all: t(lang, "search.all"),
+  hint: t(lang, "search.hint"),
+  label: t(lang, "nav.search"),
+  short: t(lang, "nav.searchShort"),
+};
+---
+<header class="site-header">
+  <div class="wrap bar">
+    <Logo href={localePath(lang, "/")} label="discordtools.de" />
+    <nav class="actions" aria-label={t(lang, "nav.menu")}>
+      <SearchPalette client:idle items={searchItems} strings={strings} />
+      <a class="btn btn-ghost btn-sm lang" href={altHref} hreflang={lang === "de" ? "en" : "de"} lang={lang === "de" ? "en" : "de"}>
+        <Icon name="Languages" size={16} />
+        <span>{lang === "de" ? "EN" : "DE"}</span>
+        <span class="sr-only">{t(lang, "lang.switch")}</span>
+      </a>
+      <button class="btn btn-ghost btn-sm btn-icon" type="button" id="theme-toggle" aria-label={t(lang, "nav.theme")}>
+        <span class="i-sun"><Icon name="Sun" size={18} /></span>
+        <span class="i-moon"><Icon name="Moon" size={18} /></span>
+      </button>
+      <a class="btn btn-ghost btn-sm btn-icon gh" href={GITHUB_URL} aria-label={t(lang, "nav.github")} rel="noopener">
+        <Icon name="Github" size={18} />
+      </a>
+    </nav>
+  </div>
+</header>
+<script>
+  const btn = document.getElementById("theme-toggle");
+  btn?.addEventListener("click", () => {
+    const root = document.documentElement;
+    const current = root.dataset.theme ?? (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    const next = current === "dark" ? "light" : "dark";
+    root.dataset.theme = next;
+    try { localStorage.setItem("dt-theme", next); } catch {}
+  });
+</script>
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    height: var(--header-h);
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: saturate(140%) blur(10px);
+    -webkit-backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .bar { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .actions { display: flex; align-items: center; gap: 4px; }
+  .lang { gap: 6px; font-weight: 600; color: var(--muted); }
+  .lang:hover { color: var(--text); }
+  #theme-toggle { color: var(--muted); }
+  .gh { color: var(--muted); }
+  :global(:root[data-theme="light"]) .i-sun, .i-moon { display: none; }
+  :global(:root[data-theme="light"]) .i-moon { display: inline; }
+  @media (prefers-color-scheme: light) {
+    :global(:root:not([data-theme="dark"])) .i-sun { display: none; }
+    :global(:root:not([data-theme="dark"])) .i-moon { display: inline; }
+  }
+  @media (max-width: 420px) {
+    .gh { display: none; }
+    :global(.logo .tld) { display: none; }
+  }
+</style>

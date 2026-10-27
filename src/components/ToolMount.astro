@@ -1,0 +1,56 @@
+---
+// Generated mapping from tool id to its island (one island per page, each bundled on its own).
+import Timestamp from "./tools/Timestamp";
+import ColoredText from "./tools/ColoredText";
+import Markdown from "./tools/Markdown";
+import Mentions from "./tools/Mentions";
+import CharacterCounter from "./tools/CharacterCounter";
+import EmbedBuilder from "./tools/EmbedBuilder";
+import WebhookManager from "./tools/WebhookManager";
+import ColorConverter from "./tools/ColorConverter";
+import ServerTags from "./tools/ServerTags";
+import Snowflake from "./tools/Snowflake";
+import InviteLookup from "./tools/InviteLookup";
+import ServerWidget from "./tools/ServerWidget";
+import EmojiDownloader from "./tools/EmojiDownloader";
+import Permissions from "./tools/Permissions";
+import BotInvite from "./tools/BotInvite";
+import Intents from "./tools/Intents";
+import SlashCommands from "./tools/SlashCommands";
+import Flags from "./tools/Flags";
+import Status from "./tools/Status";
+import ChannelNames from "./tools/ChannelNames";
+import RoleColors from "./tools/RoleColors";
+import RulesGenerator from "./tools/RulesGenerator";
+import FancyText from "./tools/FancyText";
+import InvisibleCharacter from "./tools/InvisibleCharacter";
+import AvatarTools from "./tools/AvatarTools";
+import type { Lang } from "../i18n/ui";
+interface Props { id: string; lang: Lang }
+const { id, lang } = Astro.props;
+---
+{id === "timestamp" && <Timestamp client:load lang={lang} />}
+{id === "colored-text" && <ColoredText client:load lang={lang} />}
+{id === "markdown" && <Markdown client:load lang={lang} />}
+{id === "mentions" && <Mentions client:load lang={lang} />}
+{id === "character-counter" && <CharacterCounter client:load lang={lang} />}
+{id === "embed-builder" && <EmbedBuilder client:load lang={lang} />}
+{id === "webhook-manager" && <WebhookManager client:load lang={lang} />}
+{id === "color-converter" && <ColorConverter client:load lang={lang} />}
+{id === "server-tags" && <ServerTags client:load lang={lang} />}
+{id === "snowflake" && <Snowflake client:load lang={lang} />}
+{id === "invite-lookup" && <InviteLookup client:load lang={lang} />}
+{id === "server-widget" && <ServerWidget client:load lang={lang} />}
+{id === "emoji-downloader" && <EmojiDownloader client:load lang={lang} />}
+{id === "permissions" && <Permissions client:load lang={lang} />}
+{id === "bot-invite" && <BotInvite client:load lang={lang} />}
+{id === "intents" && <Intents client:load lang={lang} />}
+{id === "slash-commands" && <SlashCommands client:load lang={lang} />}
+{id === "flags" && <Flags client:load lang={lang} />}
+{id === "status" && <Status client:load lang={lang} />}
+{id === "channel-names" && <ChannelNames client:load lang={lang} />}
+{id === "role-colors" && <RoleColors client:load lang={lang} />}
+{id === "rules-generator" && <RulesGenerator client:load lang={lang} />}
+{id === "fancy-text" && <FancyText client:load lang={lang} />}
+{id === "invisible-character" && <InvisibleCharacter client:load lang={lang} />}
+{id === "avatar-tools" && <AvatarTools client:load lang={lang} />}

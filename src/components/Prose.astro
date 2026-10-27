@@ -1,0 +1,6 @@
+---
+/** Renders plain text with `code` spans – content files stay simple strings. */
+interface Props { text: string }
+const parts = Astro.props.text.split(/(`[^`]+`)/g);
+---
+{parts.map((p) => (p.startsWith("`") && p.endsWith("`") ? <code>{p.slice(1, -1)}</code> : p))}

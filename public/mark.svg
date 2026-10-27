@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">discordtools mark</title>
+<desc id="desc">A teal message bubble with a transparent slash cut.</desc>
+<path transform="translate(0 0) scale(1)" fill="#077A57" fill-rule="evenodd" d="M152 64H360C409 64 448 103 448 152V296C448 345 409 384 360 384H192L88 448V362C73 346 64 322 64 296V152C64 103 103 64 152 64ZM278 144L182 304H234L330 144Z"/>
+</svg>

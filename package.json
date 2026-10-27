@@ -1,0 +1,38 @@
+{
+  "name": "discordtools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Free, fast and private Discord tools – discordtools.de",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check && tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "e2e": "playwright test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "@astrojs/preact": "^6.1.1",
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/noto-sans": "^5.3.0",
+    "@fontsource/source-code-pro": "^5.3.1",
+    "astro": "^7.4.2",
+    "lucide-preact": "^1.62.0",
+    "preact": "^11.0.2",
+    "tsx": "^4.23.15"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@playwright/test": "^1.64.1",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
+  }
+}
