@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - name: Imprint from secret
+        env:
+          IMPRESSUM_MD: ${{ secrets.IMPRESSUM_MD }}
+        run: |
+          if [ -n "$IMPRESSUM_MD" ]; then printf '%s\n' "$IMPRESSUM_MD" > legal/impressum.md; fi
+      - run: npm run build
+      - uses: actions/upload-artifact@v5
+        with:
+          name: site
+          path: dist
+          retention-days: 7
+
+  deploy:
+    # Only after a green build on main. The key can do nothing but rsync into the site directory (rrsync).
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+    environment:
+      name: production
+      url: https://discordtools.de
+    steps:
+      - uses: actions/download-artifact@v5
+        with:
+          name: site
+          path: dist
+      - name: Upload to the server
+        env:
+          SITE_HOST: ${{ secrets.SITE_HOST }}
+          SITE_SSH_KEY: ${{ secrets.SITE_SSH_KEY }}
+          SITE_KNOWN_HOSTS: ${{ secrets.SITE_KNOWN_HOSTS }}
+        run: |
+          if [ -z "$SITE_HOST" ] || [ -z "$SITE_SSH_KEY" ] || [ -z "$SITE_KNOWN_HOSTS" ]; then
+            echo "Deploy secrets are not set – skipped"; exit 0
+          fi
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SITE_SSH_KEY" > ~/.ssh/site && chmod 600 ~/.ssh/site
+          printf '%s\n' "$SITE_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          # Hashed assets first, pages after: a visitor never gets HTML that points at a missing file.
+          ssh_cmd="ssh -i $HOME/.ssh/site -o IdentitiesOnly=yes -o BatchMode=yes"
+          rsync -rl --checksum -e "$ssh_cmd" dist/_astro/ "dtsite@${SITE_HOST}:/_astro/"
+          rsync -rl --checksum --delete-after --delay-updates -e "$ssh_cmd" dist/ "dtsite@${SITE_HOST}:/"
+      - name: Live check
+        run: |
+          for i in $(seq 1 10); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://discordtools.de/ || true)
+            if [ "$code" = 200 ]; then echo "Live"; exit 0; fi
+            sleep 6
+          done
+          echo "Site not reachable yet (DNS/TLS?)"; exit 0

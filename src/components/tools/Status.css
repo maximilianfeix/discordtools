@@ -1,0 +1,207 @@
+.st-hero {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 14px 18px;
+  align-items: center;
+  border-radius: var(--r-lg);
+  padding: clamp(16px, 3vw, 24px);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.st-hero.is-ok {
+  border-color: color-mix(in srgb, var(--success) 40%, var(--border));
+  background: color-mix(in srgb, var(--success) 7%, var(--surface));
+}
+.st-hero.is-warn {
+  border-color: color-mix(in srgb, var(--warning) 45%, var(--border));
+  background: color-mix(in srgb, var(--warning) 8%, var(--surface));
+}
+.st-hero.is-bad {
+  border-color: color-mix(in srgb, var(--danger) 45%, var(--border));
+  background: color-mix(in srgb, var(--danger) 8%, var(--surface));
+}
+.st-hero.is-info {
+  border-color: color-mix(in srgb, var(--focus) 45%, var(--border));
+  background: color-mix(in srgb, var(--focus) 7%, var(--surface));
+}
+.st-hero-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--surface-2);
+}
+.st-hero.is-ok .st-hero-icon {
+  color: var(--success);
+}
+.st-hero.is-warn .st-hero-icon {
+  color: var(--warning);
+}
+.st-hero.is-bad .st-hero-icon {
+  color: var(--danger);
+}
+.st-hero.is-info .st-hero-icon {
+  color: var(--focus);
+}
+.st-hero h2 {
+  margin: 0 0 2px;
+  font-size: clamp(1.25rem, 1.05rem + 1vw, 1.65rem);
+}
+.st-hero p {
+  margin: 0;
+}
+.st-hero-actions {
+  display: grid;
+  gap: 6px;
+  justify-items: end;
+  text-align: right;
+}
+@media (max-width: 640px) {
+  .st-hero {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .st-hero-actions {
+    grid-column: 1 / -1;
+    justify-items: start;
+    text-align: left;
+  }
+}
+.st-groups {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+  align-items: start;
+}
+.st-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 14px 16px;
+  min-width: 0;
+}
+.st-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.st-row-name {
+  display: grid;
+  min-width: 0;
+}
+.st-row-name strong {
+  font-weight: 600;
+}
+.st-row-name span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.st-children {
+  margin-top: 10px;
+}
+.st-children summary {
+  display: list-item;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 36px;
+}
+.st-children ul {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.st-children li {
+  padding: 6px 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.st-incident {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--warning);
+  border-radius: var(--r-lg);
+  padding: 16px 18px;
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+.st-incident.is-bad {
+  border-left-color: var(--danger);
+}
+.st-incident.is-info {
+  border-left-color: var(--focus);
+}
+.st-incident h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+.st-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+.st-timeline li {
+  position: relative;
+  padding: 0 0 14px 20px;
+  border-left: 2px solid var(--border);
+  margin-left: 5px;
+}
+.st-timeline li:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+.st-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--border-strong);
+}
+.st-timeline li:first-child::before {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+.st-up-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: baseline;
+  font-size: 0.85rem;
+}
+.st-up-head strong {
+  font-weight: 620;
+}
+.st-up-body {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.st-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.st-spin {
+  animation: st-spin 0.9s linear infinite;
+}
+@keyframes st-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

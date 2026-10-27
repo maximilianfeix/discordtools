@@ -155,6 +155,7 @@ export default function SearchPalette({ items, strings }: { items: Item[]; strin
               placeholder={strings.placeholder}
               aria-label={strings.label}
               role="combobox"
+              list={undefined}
               aria-expanded="true"
               aria-controls="palette-list"
               aria-activedescendant={flat[active] ? `pi-${flat[active]!.id}` : undefined}

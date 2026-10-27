@@ -1,0 +1,11 @@
+---
+import { readLegal } from "../lib/legal";
+interface Props { name: string; missing: string }
+const blocks = readLegal(Astro.props.name);
+---
+{blocks ? blocks.map((b) => (
+  <>
+    {b.heading && <h2>{b.heading}</h2>}
+    {b.lines.length > 0 && <p>{b.lines.map((l, i) => <>{i > 0 && <br />}{l}</>)}</p>}
+  </>
+)) : <p class="notice">{Astro.props.missing}</p>}

@@ -1,0 +1,20 @@
+---
+import Base from "./Base.astro";
+import type { Lang } from "../i18n/ui";
+interface Props { lang: Lang; title: string; paths: Record<Lang, string>; description: string }
+const { lang, title, paths, description } = Astro.props;
+---
+<Base lang={lang} title={`${title} · discordtools.de`} description={description} paths={paths}>
+  <article class="wrap legal">
+    <h1>{title}</h1>
+    <slot />
+  </article>
+</Base>
+<style>
+  .legal { max-width: 780px; padding-top: 40px; }
+  .legal :global(h2) { margin-top: 36px; font-size: 1.25rem; }
+  .legal :global(h3) { margin-top: 22px; }
+  .legal :global(p), .legal :global(li) { color: var(--muted); }
+  .legal :global(strong) { color: var(--text); }
+  .legal :global(table) { margin: 12px 0 20px; }
+</style>

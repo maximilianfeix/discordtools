@@ -1,0 +1,276 @@
+.pp {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.pp-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: flex-end;
+}
+
+.pp-search {
+  flex: 1 1 240px;
+}
+
+.pp-search-box {
+  position: relative;
+}
+
+.pp-search-box svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--faint);
+  pointer-events: none;
+}
+
+.pp-search-box .input {
+  padding-left: 36px;
+}
+
+.pp-toolbar-actions {
+  gap: 6px 10px;
+}
+
+.pp-only {
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.875rem;
+}
+
+.pp-only input {
+  margin: 0;
+}
+
+.pp-presets {
+  display: grid;
+  gap: 6px;
+}
+
+.pp-preset-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pp-preset {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 560;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.pp-preset:hover {
+  border-color: var(--border-strong);
+}
+
+.pp-preset[aria-pressed="true"] {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.pp-preset.is-warn {
+  color: var(--warning);
+}
+
+.pp-preset.is-warn[aria-pressed="true"] {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.pp-groups {
+  display: grid;
+  gap: 12px;
+}
+
+.pp-group {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-elev);
+  min-width: 0;
+}
+
+.pp-group-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 6px 6px 14px;
+  min-height: 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+details.pp-group:not([open]) > .pp-group-head {
+  border-bottom: 0;
+}
+
+summary.pp-group-head {
+  cursor: pointer;
+  list-style: none;
+}
+
+summary.pp-group-head::-webkit-details-marker {
+  display: none;
+}
+
+summary.pp-group-head::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 1.75px solid var(--muted);
+  border-bottom: 1.75px solid var(--muted);
+  transform: rotate(-45deg);
+  transition: transform 0.15s var(--ease);
+  flex: none;
+}
+
+details[open] > summary.pp-group-head::before {
+  transform: rotate(45deg);
+}
+
+.pp-group-name {
+  font-weight: 620;
+  font-size: 0.95rem;
+}
+
+.pp-count {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.pp-all {
+  margin-left: auto;
+}
+
+.pp-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 2px;
+}
+
+.pp-item {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 10px;
+  border-radius: 8px;
+  min-width: 0;
+}
+
+.pp-item:hover {
+  background: var(--surface-2);
+}
+
+.pp-item.is-on {
+  background: var(--accent-soft);
+}
+
+.pp-item.is-on.is-danger {
+  background: var(--danger-soft);
+}
+
+.pp-item input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  flex: none;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.pp-item.is-danger input {
+  accent-color: var(--danger);
+}
+
+.pp-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+  min-width: 0;
+  cursor: pointer;
+}
+
+/* whole row is the tap target */
+.pp-label::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.pp-name {
+  font-weight: 560;
+  font-size: 0.925rem;
+  overflow-wrap: anywhere;
+}
+
+.pp-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  white-space: nowrap;
+}
+
+.pp-badge-danger {
+  color: var(--danger);
+  border-color: color-mix(in srgb, var(--danger) 40%, transparent);
+}
+
+.pp-badge-muted {
+  color: var(--faint);
+}
+
+.pp-desc {
+  flex-basis: 100%;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.pp-key {
+  flex-basis: 100%;
+  font-size: 0.72rem;
+  color: var(--faint);
+  overflow-wrap: anywhere;
+}
+
+.pp-compact .pp-list {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+}
+
+.pp-compact .pp-item {
+  padding: 8px;
+}

@@ -1,0 +1,20 @@
+---
+import Base from "../layouts/Base.astro";
+import ToolCard from "../components/ToolCard.astro";
+import { TOOLS } from "../tools/registry";
+const popular = TOOLS.filter((t) => t.popular).slice(0, 6);
+---
+<Base lang="de" title="Seite nicht gefunden · discordtools.de" description="Diese Seite gibt es nicht." paths={{ de: "/404", en: "/404" }} noindex>
+  <section class="wrap nf">
+    <p class="code">404</p>
+    <h1>Diese Seite gibt es nicht.</h1>
+    <p class="lead">Vielleicht findest du dein Tool hier – oder drück <kbd>/</kbd> zum Suchen. <span lang="en">Page not found – <a href="/en">English tools</a>.</span></p>
+    <div class="card-grid">{popular.map((t) => <ToolCard tool={t} lang="de" />)}</div>
+  </section>
+</Base>
+<style>
+  .nf { padding-top: 64px; }
+  .code { font-family: var(--font-mono); color: var(--accent); font-size: 1rem; margin-bottom: 8px; }
+  .lead { color: var(--muted); margin-bottom: 28px; }
+  kbd { padding: 1px 6px; border: 1px solid var(--border); border-radius: 5px; background: var(--surface-2); }
+</style>

@@ -143,7 +143,7 @@ export const TOOLS: Tool[] = [
       en: "Build messages with embeds, preview live and send via webhook.",
     },
     keywords: ["embed", "embed builder", "embed generator", "webhook", "discohook", "message builder", "nachricht", "json"],
-    local: true,
+    local: false,
     popular: true,
   },
   {
@@ -157,7 +157,7 @@ export const TOOLS: Tool[] = [
       en: "Inspect, rename, change avatar or delete a webhook.",
     },
     keywords: ["webhook", "webhook tester", "webhook info", "delete webhook", "webhook löschen", "webhook checker"],
-    local: true,
+    local: false,
   },
   {
     id: "color-converter",
@@ -239,7 +239,7 @@ export const TOOLS: Tool[] = [
       en: "Download custom emojis and stickers in full size.",
     },
     keywords: ["emoji", "sticker", "download", "herunterladen", "emoji downloader", "gif", "png", "cdn"],
-    local: true,
+    local: false,
   },
 
   // ---------- developers ----------

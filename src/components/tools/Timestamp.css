@@ -1,0 +1,174 @@
+.ts .ts-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 20px;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+.ts .ts-status.bad {
+  color: var(--warning);
+}
+.ts .ts-status:empty {
+  display: none;
+}
+.ts .ts-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ts .ts-quick .btn {
+  min-height: 40px;
+}
+.ts .ts-dt {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+}
+.ts .ts-dt .input {
+  min-width: 0;
+}
+.ts .ts-tz-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.ts .ts-tz-row .input {
+  flex: 1;
+  min-width: 0;
+}
+.ts .ts-offset {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  min-height: 32px;
+}
+.ts .ts-notice {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+.ts .ts-notice p {
+  margin: 0;
+}
+.ts p.ts-notice {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.ts p.ts-notice svg {
+  flex: none;
+  margin-top: 3px;
+}
+.ts .ts-unix {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.ts .ts-unix .field {
+  flex: 1 1 180px;
+}
+.ts .ts-ann-out code {
+  white-space: pre-wrap;
+}
+.ts .ts-view {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.ts .ts-formats > .hint {
+  margin: 0 0 8px;
+}
+.ts .ts-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+.ts .ts-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px 12px;
+  align-items: center;
+  padding: 9px 0;
+  border-top: 1px solid var(--border);
+}
+.ts .ts-row.is-hl {
+  background: var(--accent-soft);
+  margin-inline: -10px;
+  padding-inline: 10px;
+  border-radius: var(--r-md);
+}
+.ts .ts-row-main {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+}
+.ts .ts-row-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.ts .ts-pasted {
+  padding: 0 8px;
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+.ts .ts-row-value {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.ts .ts-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.ts .ts-code code {
+  font-size: 0.85rem;
+}
+.ts .ts-code svg {
+  color: var(--muted);
+}
+.ts .ts-code:hover {
+  border-color: var(--accent);
+}
+.ts .ts-code:hover svg {
+  color: var(--accent);
+}
+@media (max-width: 520px) {
+  .ts .ts-dt {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ts .ts-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ts .ts-code {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 960px) {
+  .ts.tool-layout.split > .ts-when {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .ts.tool-layout.split > .ts-formats {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .ts.tool-layout.split > .ts-ann {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}

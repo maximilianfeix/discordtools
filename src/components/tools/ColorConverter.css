@@ -1,0 +1,142 @@
+.cc-input-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+.cc-input-row .input {
+  flex: 1;
+  min-width: 0;
+}
+.cc-picker {
+  flex: none;
+  width: 56px;
+  min-height: 44px;
+  padding: 4px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--bg-elev);
+  cursor: pointer;
+}
+.cc-picker::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.cc-picker::-webkit-color-swatch {
+  border: 0;
+  border-radius: 6px;
+}
+.cc-picker::-moz-color-swatch {
+  border: 0;
+  border-radius: 6px;
+}
+.cc-big {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.cc-big-swatch {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  flex: none;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.cc-big-hex {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+.cc-outputs {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+}
+.cc-swatches {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+}
+.cc-swatch {
+  display: grid;
+  gap: 4px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+  cursor: pointer;
+  overflow: hidden;
+  font: inherit;
+  color: var(--text);
+  text-align: left;
+}
+.cc-swatch:hover {
+  border-color: var(--border-strong);
+}
+.cc-swatch[aria-pressed="true"] {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.cc-swatch-color {
+  height: 34px;
+}
+.cc-swatch-text {
+  display: grid;
+  padding: 2px 8px 6px;
+  min-width: 0;
+}
+.cc-swatch-name {
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cc-swatch-hex {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+.cc-themes {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+}
+.cc-theme {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.cc-theme .dp {
+  padding: 12px 0;
+}
+.cc-theme .dp-message {
+  padding: 2px 12px;
+  gap: 12px;
+}
+.cc-theme-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.cc-snippets {
+  display: grid;
+  gap: 8px;
+}
+.cc .field > .segmented {
+  justify-self: start;
+}
+@media (max-width: 959px) {
+  .cc > .stack:first-child {
+    display: contents;
+  }
+  .cc-palettes {
+    order: 3;
+  }
+}

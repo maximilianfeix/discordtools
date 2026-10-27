@@ -1,0 +1,10 @@
+---
+import LegalPage from "../layouts/LegalPage.astro";
+import LegalText from "../components/LegalText.astro";
+---
+<LegalPage lang="de" title="Impressum" description="Impressum von discordtools.de" paths={{ de: "/impressum", en: "/en/imprint" }}>
+  <LegalText name="impressum" missing="Die Anbieterangaben werden beim Veröffentlichen ergänzt." />
+  <h2>Hinweis</h2>
+  <p>discordtools.de ist ein unabhängiges Projekt und steht in keiner Verbindung zu Discord Inc. „Discord“ ist eine Marke von Discord Inc.</p>
+  <p>Fehler gefunden? Melde ihn gern auf <a href="https://github.com/maximilianfeix/discordtools/issues">GitHub</a>.</p>
+</LegalPage>

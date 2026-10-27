@@ -18,7 +18,7 @@ const { lang, title, description, paths, jsonLd = [], noindex = false } = Astro.
 const site = "https://discordtools.de";
 const canonical = site + (paths[lang] === "/" ? "/" : paths[lang]);
 const other: Lang = lang === "de" ? "en" : "de";
-const ogImage = `${site}/og.png`;
+const ogImage = `${site}/${lang === "de" ? "og.png" : "og-en.png"}`;
 ---
 <!doctype html>
 <html lang={lang}>

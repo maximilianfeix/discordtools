@@ -1,0 +1,55 @@
+.st-taginput { font-family: var(--font-mono); font-size: 22px; letter-spacing: 0.08em; text-transform: none; max-width: 220px; }
+.st-status { display: flex; gap: 8px; align-items: flex-start; font-size: 0.875rem; }
+.st-status ul { margin: 0; padding-left: 18px; }
+.st-ok { color: var(--accent); }
+.st-warn { color: var(--warning); }
+.st-bad { color: var(--danger); }
+.st-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.st-badge-btn {
+  width: 48px; height: 48px; display: grid; place-items: center; background: var(--bg-elev); border: 1px solid var(--border);
+  border-radius: var(--r-md); cursor: pointer;
+}
+.st-badge-btn:hover { border-color: var(--border-strong); }
+.st-badge-btn[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; background: var(--accent-soft); }
+.st-colors { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.st-color { display: flex; align-items: center; gap: 8px; }
+.st-swatch { position: relative; width: 44px; height: 44px; border-radius: var(--r-md); border: 1px solid var(--border-strong); overflow: hidden; cursor: pointer; flex: none; }
+.st-swatch input { position: absolute; inset: -8px; width: calc(100% + 16px); height: calc(100% + 16px); border: 0; padding: 0; cursor: pointer; }
+.st-presets { display: flex; flex-wrap: wrap; gap: 6px; }
+.st-preset { width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--border-strong); cursor: pointer; }
+.st-preset[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--accent); }
+.st-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.st-chip {
+  min-height: 40px; padding: 0 12px; font: inherit; font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em;
+  color: var(--text); background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--r-md); cursor: pointer;
+}
+.st-chip:hover { border-color: var(--border-strong); }
+.st-chip[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.st-chip.is-warn { border-style: dashed; }
+.st-howto ol { margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 0.925rem; }
+.st-howto h3 { margin: 4px 0 8px; font-size: 0.95rem; }
+.st-howto p { font-size: 0.875rem; color: var(--muted); margin: 0; }
+/* Preview */
+.st-pv .dp { padding: 12px 0; }
+.st-tag {
+  display: inline-flex; align-items: center; gap: 3px; height: 18px; padding: 0 5px 0 4px; margin-left: 2px; border-radius: 4px; align-self: center;
+  background: var(--st-chip); color: var(--dp-strong); font-size: 12px; font-weight: 600; line-height: 18px; letter-spacing: 0.02em; white-space: nowrap;
+  vertical-align: middle; cursor: default;
+}
+.st-tag svg { display: block; flex: none; }
+.dp-theme-dark, .dp-theme-ash, .dp-theme-onyx { --st-chip: rgb(151 151 159 / 0.16); }
+.dp-theme-light { --st-chip: rgb(151 151 159 / 0.22); }
+.st-members { padding: 8px; display: grid; gap: 2px; }
+.st-members-h { padding: 8px 8px 4px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; color: var(--dp-muted); }
+.st-member { display: flex; align-items: center; gap: 10px; padding: 6px 8px; border-radius: 6px; min-width: 0; }
+.st-member:hover { background: rgb(151 151 159 / 0.1); }
+.st-mav { position: relative; width: 32px; height: 32px; border-radius: 50%; flex: none; display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 13px; }
+.st-mav::after { content: ""; position: absolute; right: -2px; bottom: -2px; width: 10px; height: 10px; border-radius: 50%; background: #43a25a; border: 3px solid var(--dp-bg); }
+.st-mname { font-weight: 500; color: var(--dp-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.st-mrow { display: flex; align-items: center; gap: 2px; min-width: 0; }
+.st-big { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 18px; }
+.st-big .st-tag { height: 28px; font-size: 18px; padding: 0 9px 0 7px; gap: 5px; border-radius: 6px; }
+@media (min-width: 960px) {
+  .st.tool-layout.split > .st-pv { grid-column: 2; grid-row: 1 / span 2; }
+  .st.tool-layout.split > .st-rest { grid-column: 1; grid-row: 2; }
+}

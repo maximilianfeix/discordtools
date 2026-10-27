@@ -1,0 +1,31 @@
+.rg-view { display: none; }
+@media (max-width: 959px) {
+  .rg-view { display: flex; }
+  .rg[data-view="edit"] .rg-out { display: none; }
+  .rg[data-view="preview"] .rg-edit { display: none; }
+}
+.rg-rules { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.rg-rule { border: 1px solid var(--border); border-radius: var(--r-md); background: var(--bg-elev); min-width: 0; }
+.rg-rule.is-on { border-color: var(--border-strong); background: var(--surface); }
+.rg-rule-head { display: flex; align-items: center; gap: 4px; padding: 4px 4px 4px 10px; min-height: 48px; }
+.rg-rule-head .check { flex: 1; min-width: 0; align-items: center; min-height: 40px; }
+.rg-rule-head .check span { overflow-wrap: anywhere; }
+.rg-rule:not(.is-on) .rg-rule-head .check span { color: var(--muted); }
+.rg-num { font-family: var(--font-mono); font-size: 0.78rem; color: var(--faint); min-width: 1.6em; text-align: right; }
+.rg-edit-body { display: grid; gap: 10px; padding: 0 12px 12px; }
+.rg-title-row { display: flex; gap: 8px; }
+.rg-emoji { width: 64px; flex: none; text-align: center; font-size: 18px; }
+.rg-title-row .input:not(.rg-emoji) { flex: 1; min-width: 0; }
+.rg-edit-body .textarea { min-height: 76px; }
+.rg-color { display: flex; gap: 10px; align-items: center; }
+.rg-swatch { position: relative; width: 52px; height: 44px; flex: none; border-radius: var(--r-md); border: 1px solid var(--border-strong); overflow: hidden; cursor: pointer; }
+.rg-swatch input { position: absolute; inset: -8px; width: calc(100% + 16px); height: calc(100% + 16px); border: 0; padding: 0; cursor: pointer; }
+.rg-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.rg-count { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+.rg-count.is-over { color: var(--warning); }
+.rg-parts { display: grid; gap: 6px; }
+.rg-part { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 8px 8px 12px; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--bg-elev); font-size: 0.875rem; }
+.rg-legal { display: flex; gap: 10px; align-items: flex-start; margin: 0; font-size: 0.85rem; }
+.rg-legal svg { flex: none; margin-top: 2px; color: var(--warning); }
+.rg-json { max-height: 220px; overflow: auto; margin: 0; padding: 12px; font-size: 0.8rem; background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--r-md); white-space: pre-wrap; overflow-wrap: anywhere; }
+.rg-add { justify-self: start; }

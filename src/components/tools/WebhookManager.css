@@ -1,0 +1,114 @@
+.wh-info {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.wh-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+}
+.wh-name {
+  margin: 0 0 4px;
+  font-size: 1.3rem;
+  overflow-wrap: anywhere;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.wh-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 4px;
+  background: #5865f2;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+.wh-info .lk-kv {
+  grid-column: 1 / -1;
+}
+.wh-actions {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 960px) {
+  .wh-actions {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+.wh-avatar-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wh-avatar-row .wh-avatar {
+  width: 56px;
+  height: 56px;
+}
+.wh-file {
+  font-size: 0.9rem;
+  max-width: 100%;
+}
+.wh-file::file-selector-button {
+  font: inherit;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 0 14px;
+  margin-right: 10px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  cursor: pointer;
+}
+.wh-danger {
+  border-color: color-mix(in srgb, var(--danger) 35%, var(--border));
+}
+.wh-danger .panel-title {
+  color: var(--danger);
+}
+.wh-confirm {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border-radius: var(--r-md);
+  background: var(--danger-soft);
+  border: 1px solid color-mix(in srgb, var(--danger) 40%, transparent);
+}
+.wh-confirm p {
+  margin: 0;
+}
+.wh-btn-danger-solid {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: var(--bg);
+}
+.wh-btn-danger-solid:hover {
+  background: color-mix(in srgb, var(--danger) 85%, var(--text));
+  color: var(--bg);
+}
+.wh-count {
+  font-variant-numeric: tabular-nums;
+}
+.wh-count.is-over {
+  color: var(--danger);
+}
+.wh-where ol {
+  margin: 0;
+  padding-left: 1.2em;
+}
+.wh .field > .segmented {
+  justify-self: start;
+}

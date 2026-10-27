@@ -57,7 +57,8 @@ const RULES: Rule[] = [
     build: (m) => ({ type: "timestamp", unix: Number(m[1]), style: (m[2] as TimestampStyle | undefined) ?? "f" }),
   },
   { re: /^<(a?):(\w{2,32}):(\d{15,21})>/, build: (m) => ({ type: "emoji", animated: m[1] === "a", name: m[2]!, id: m[3]! }) },
-  { re: /^\\([*_`~|\\<>#\-[\]()])/, build: (m) => ({ type: "text", value: m[1]! }) },
+  // Discord lets a backslash escape any ASCII punctuation (e.g. "1\\." stops a numbered list).
+  { re: /^\\([!-/:-@[-`{-~])/, build: (m) => ({ type: "text", value: m[1]! }) },
 ];
 
 const SPECIAL = /[*_`~|[<h@\\\n]/;

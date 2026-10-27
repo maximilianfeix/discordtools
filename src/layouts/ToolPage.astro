@@ -85,7 +85,7 @@ if (content?.faq.length) {
         <section class="docs-block">
           <h2>{t(lang, "tool.howto")}</h2>
           <ol class="steps">
-            {content.steps.map((s) => <li><Prose text={s} /></li>)}
+            {content.steps.map((s) => <li><span><Prose text={s} /></span></li>)}
           </ol>
           {content.about?.map((p) => <p><Prose text={p} /></p>)}
         </section>
@@ -132,10 +132,12 @@ if (content?.faq.length) {
     .tool-icon { width: 40px; height: 40px; border-radius: 11px; }
     .tool-title { gap: 12px; }
   }
-  .tool-docs { display: grid; gap: 32px; margin-top: 56px; max-width: 820px; }
+  .tool-docs { display: grid; gap: 32px; margin-top: 56px; max-width: 820px; grid-template-columns: minmax(0, 1fr); }
+  .tool-docs code { overflow-wrap: anywhere; }
   .docs-block h2 { margin-bottom: 14px; }
   .steps { margin: 0 0 16px; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
   .steps li { counter-increment: s; display: flex; gap: 12px; color: var(--muted); }
+  .steps li > span { min-width: 0; overflow-wrap: anywhere; }
   .steps li::before {
     content: counter(s); flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
     background: var(--surface-2); border: 1px solid var(--border); color: var(--text); font-size: 0.8rem; font-weight: 650;

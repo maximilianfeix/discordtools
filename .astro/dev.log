@@ -4,3 +4,822 @@
 {"message":" astro  v7.4.2 ready in 418 ms\n┃ Local    http://localhost:4322/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
 {"message":"watching for file changes...","label":null,"level":"info"}
 {"message":"[200] / 25ms","label":null,"level":"info"}
+{"message":"Configuration file updated. Restarting...","label":null,"level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"server restarted.","label":"vite","level":"info"}
+{"message":"[200] /snowflake 76ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 15ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 17ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 10ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 16ms","label":null,"level":"info"}
+{"message":"[200] /schriftarten 9ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 9ms","label":null,"level":"info"}
+{"message":"[200] /schriftarten 27ms","label":null,"level":"info"}
+{"message":"[200] /schriftarten 8ms","label":null,"level":"info"}
+{"message":"/src/components/tools/FancyText.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/FancyText.css","label":"watch","level":"info"}
+{"message":"[200] /schriftarten 33ms","label":null,"level":"info"}
+{"message":"[200] /en/fancy-text 50ms","label":null,"level":"info"}
+{"message":"[200] /en/fancy-text 21ms","label":null,"level":"info"}
+{"message":"/src/components/tools/Timestamp.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/Timestamp.tsx","label":"watch","level":"info"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InvisibleCharacter.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"/src/components/tools/Snowflake.tsx","label":"watch","level":"info"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"Could not import `./EmbedBuilder.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"[200] /embed-builder 63ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 13ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 27ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 10ms","label":null,"level":"info"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ColoredText.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"[200] /zeitstempel 34ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 53ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 53ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 53ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 53ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 7ms","label":null,"level":"info"}
+{"message":"[200] /schriftarten 13ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 21ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 8ms","label":null,"level":"info"}
+{"message":"[200] /unsichtbares-zeichen 10ms","label":null,"level":"info"}
+{"message":"[200] /en/invisible-character 15ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 8ms","label":null,"level":"info"}
+{"message":"Could not import `./InviteLookup.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./InviteLookup.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"/src/components/tools/Timestamp.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/Timestamp.css","label":"watch","level":"info"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at /Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx:465:6\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/src/components/tools/InvisibleCharacter.css","label":"watch","level":"info"}
+{"message":"/src/components/tools/InvisibleCharacter.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/InvisibleCharacter.tsx","label":"watch","level":"info"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/Timestamp.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (465:6)\n\n  463 |       </div>\n  464 |\n> 465 |       <section class=\"panel sticky ts-formats\" aria-labelledby=\"ts-formats\">\n      |       ^\n  466 |         <h2 class=\"panel-title\" id=\"ts-formats\">{s.formats}</h2>\n  467 |         <div class=\"ts-view\">\n  468 |           <div class=\"field\">\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/src/components/tools/Timestamp.tsx","label":"watch","level":"info"}
+{"message":"[200] /en/invisible-character 20ms","label":null,"level":"info"}
+{"message":"[200] /en/invisible-character 20ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 46ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 16ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 33ms","label":null,"level":"info"}
+{"message":"[200] /en/timestamp 42ms","label":null,"level":"info"}
+{"message":"[200] /en/timestamp 10ms","label":null,"level":"info"}
+{"message":"[200] /en/timestamp 12ms","label":null,"level":"info"}
+{"message":"[200] /en/timestamp 17ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 92ms","label":null,"level":"info"}
+{"message":"[200] /farbiger-text 18ms","label":null,"level":"info"}
+{"message":"[200] /farbiger-text 17ms","label":null,"level":"info"}
+{"message":"[200] /farbiger-text 10ms","label":null,"level":"info"}
+{"message":"[200] /farbiger-text 11ms","label":null,"level":"info"}
+{"message":"[200] /en/invisible-character 12ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 36ms","label":null,"level":"info"}
+{"message":"/src/components/tools/Snowflake.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/Snowflake.css","label":"watch","level":"info"}
+{"message":"/src/components/tools/Timestamp.tsx","label":"watch","level":"info"}
+{"message":"[200] /snowflake 30ms","label":null,"level":"info"}
+{"message":"/src/components/tools/InvisibleCharacter.css","label":"watch","level":"info"}
+{"message":"[200] /en/invisible-character 21ms","label":null,"level":"info"}
+{"message":"/src/components/tools/EmbedBuilder.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/EmbedBuilder.css","label":"watch","level":"info"}
+{"message":"[200] /embed-builder 90ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 27ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 14ms","label":null,"level":"info"}
+{"message":"/src/components/tools/ColoredText.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/InviteLookup.css","label":"watch","level":"info"}
+{"message":"/src/components/tools/Snowflake.css","label":"watch","level":"info"}
+{"message":"[200] /einladung-pruefen 17ms","label":null,"level":"info"}
+{"message":"[200] /farbiger-text 26ms","label":null,"level":"info"}
+{"message":"/src/components/tools/EmbedBuilder.css","label":"watch","level":"info"}
+{"message":"[200] /embed-builder 21ms","label":null,"level":"info"}
+{"message":"/src/components/tools/InviteLookup.css","label":"watch","level":"info"}
+{"message":"[200] /farbiger-text 28ms","label":null,"level":"info"}
+{"message":"[200] /en/invite-lookup 42ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 8ms","label":null,"level":"info"}
+{"message":"[200] /en/colored-text 38ms","label":null,"level":"info"}
+{"message":"[200] /en/colored-text 38ms","label":null,"level":"info"}
+{"message":"[200] /en/colored-text 38ms","label":null,"level":"info"}
+{"message":"[200] /en/colored-text 38ms","label":null,"level":"info"}
+{"message":"[200] /en/colored-text 7ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 20ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 7ms","label":null,"level":"info"}
+{"message":"/src/components/tools/EmbedBuilder.css","label":"watch","level":"info"}
+{"message":"[200] /embed-builder 16ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 5ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 20ms","label":null,"level":"info"}
+{"message":"/src/components/tools/ColoredText.tsx","label":"watch","level":"info"}
+{"message":"[200] /en/permissions-calculator 16ms","label":null,"level":"info"}
+{"message":"/src/components/tools/EmbedBuilder.tsx","label":"watch","level":"info"}
+{"message":"[200] /embed-builder 26ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 26ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 17ms","label":null,"level":"info"}
+{"message":"/src/components/tools/Permissions.css","label":"watch","level":"info"}
+{"message":"/src/components/tools/Permissions.tsx","label":"watch","level":"info"}
+{"message":"[200] /en/permissions-calculator 35ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 30ms","label":null,"level":"info"}
+{"message":"/src/components/tools/EmbedBuilder.css","label":"watch","level":"info"}
+{"message":"[200] /embed-builder 40ms","label":null,"level":"info"}
+{"message":"Could not import `./ServerWidget.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ServerWidget.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ServerWidget.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ServerWidget.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ServerWidget.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ServerWidget.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ServerWidget.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ServerWidget.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ServerWidget.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"[200] /embed-builder 36ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 13ms","label":null,"level":"info"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"/src/components/tools/ServerWidget.css","label":"watch","level":"info"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./ChannelNames.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"[200] /embed-builder 27ms","label":null,"level":"info"}
+{"message":"[200] /kanalnamen 7ms","label":null,"level":"info"}
+{"message":"[200] /markdown 22ms","label":null,"level":"info"}
+{"message":"[200] /markdown 14ms","label":null,"level":"info"}
+{"message":"[200] /markdown 16ms","label":null,"level":"info"}
+{"message":"[200] /markdown 12ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 14ms","label":null,"level":"info"}
+{"message":"[200] /kanalnamen 5ms","label":null,"level":"info"}
+{"message":"[200] /markdown 6ms","label":null,"level":"info"}
+{"message":"/src/components/tools/ChannelNames.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/ChannelNames.css","label":"watch","level":"info"}
+{"message":"[200] /en/channel-names 21ms","label":null,"level":"info"}
+{"message":"[200] /en/channel-names 5ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-builder 25ms","label":null,"level":"info"}
+{"message":"[200] /intents-rechner 36ms","label":null,"level":"info"}
+{"message":"[200] /markdown 7ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 10ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-builder 5ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-builder 6ms","label":null,"level":"info"}
+{"message":"[200] /markdown 6ms","label":null,"level":"info"}
+{"message":"/src/components/tools/Intents.css","label":"watch","level":"info"}
+{"message":"/src/components/tools/Permissions.css","label":"watch","level":"info"}
+{"message":"/src/components/tools/BotInvite.css","label":"watch","level":"info"}
+{"message":"[200] /en/intents-calculator 46ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 18ms","label":null,"level":"info"}
+{"message":"[200] /en/bot-invite-link 6ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 6ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 26ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 6ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 6ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-builder 16ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-builder 6ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-builder 8ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 30ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-builder 7ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-builder 9ms","label":null,"level":"info"}
+{"message":"[200] /en/bot-invite-link 12ms","label":null,"level":"info"}
+{"message":"/src/components/tools/BotInvite.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/EmojiDownloader.css","label":"watch","level":"info"}
+{"message":"/Users/maximilian/code/discordtools/src/components/tools/BotInvite.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (488:6)\n\n  486 |           </section>\n  487 |         </div>\n> 488 |       </div>\n      |       ^\n  489 |     </div>\n  490 |   );\n  491 | }\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/src/components/tools/BotInvite.tsx","label":"watch","level":"info"}
+{"message":"[200] /embed-builder 25ms","label":null,"level":"info"}
+{"message":"/src/components/tools/BotInvite.css","label":"watch","level":"info"}
+{"message":"[200] /embed-builder 19ms","label":null,"level":"info"}
+{"message":"[200] /rollenfarben 31ms","label":null,"level":"info"}
+{"message":"[200] /rollenfarben 6ms","label":null,"level":"info"}
+{"message":"/src/components/tools/RoleColors.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/RoleColors.css","label":"watch","level":"info"}
+{"message":"[200] /en/role-colors 20ms","label":null,"level":"info"}
+{"message":"/src/components/tools/RoleColors.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/RoleColors.css","label":"watch","level":"info"}
+{"message":"[200] /rollenfarben 27ms","label":null,"level":"info"}
+{"message":"[200] /rollenfarben 5ms","label":null,"level":"info"}
+{"message":"[200] /erwaehnungen 69ms","label":null,"level":"info"}
+{"message":"[200] /erwaehnungen 69ms","label":null,"level":"info"}
+{"message":"[200] /erwaehnungen 69ms","label":null,"level":"info"}
+{"message":"[200] /erwaehnungen 69ms","label":null,"level":"info"}
+{"message":"[200] /erwaehnungen 8ms","label":null,"level":"info"}
+{"message":"/src/components/tools/Mentions.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/Mentions.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/Mentions.css","label":"watch","level":"info"}
+{"message":"[200] /flags-decoder 26ms","label":null,"level":"info"}
+{"message":"[200] /flags-decoder 4ms","label":null,"level":"info"}
+{"message":"[200] /flags-decoder 28ms","label":null,"level":"info"}
+{"message":"[200] /webhook-manager 7ms","label":null,"level":"info"}
+{"message":"[200] /en/flags-decoder 41ms","label":null,"level":"info"}
+{"message":"/src/components/tools/Flags.css","label":"watch","level":"info"}
+{"message":"/src/components/tools/Flags.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/WebhookManager.css","label":"watch","level":"info"}
+{"message":"/src/components/tools/WebhookManager.css","label":"watch","level":"info"}
+{"message":"[200] /en/webhook-manager 34ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 34ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 9ms","label":null,"level":"info"}
+{"message":"[200] /zeichenzaehler 42ms","label":null,"level":"info"}
+{"message":"[200] /zeichenzaehler 42ms","label":null,"level":"info"}
+{"message":"[200] /zeichenzaehler 42ms","label":null,"level":"info"}
+{"message":"[200] /zeichenzaehler 42ms","label":null,"level":"info"}
+{"message":"[200] /zeichenzaehler 6ms","label":null,"level":"info"}
+{"message":"[200] /regeln 26ms","label":null,"level":"info"}
+{"message":"[200] /regeln 8ms","label":null,"level":"info"}
+{"message":"/src/components/tools/ColorConverter.css","label":"watch","level":"info"}
+{"message":"[200] /en/character-counter 19ms","label":null,"level":"info"}
+{"message":"[200] /en/character-counter 4ms","label":null,"level":"info"}
+{"message":"/src/components/tools/RulesGenerator.tsx","label":"watch","level":"info"}
+{"message":"[200] /en/rules-generator 10ms","label":null,"level":"info"}
+{"message":"[200] /en/character-counter 4ms","label":null,"level":"info"}
+{"message":"[200] /en/rules-generator 18ms","label":null,"level":"info"}
+{"message":"[200] /status 33ms","label":null,"level":"info"}
+{"message":"[200] /status 11ms","label":null,"level":"info"}
+{"message":"[200] /status 26ms","label":null,"level":"info"}
+{"message":"[200] /farbiger-text 61ms","label":null,"level":"info"}
+{"message":"[200] /farbiger-text 61ms","label":null,"level":"info"}
+{"message":"[200] /farbiger-text 61ms","label":null,"level":"info"}
+{"message":"[200] /farbiger-text 61ms","label":null,"level":"info"}
+{"message":"[200] /farbiger-text 17ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 97ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 10ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeitstempel f1`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeitstempel f1`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeitstempel f1`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeitstempel f1`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeitstempel f1 144ms","label":null,"level":"info"}
+{"message":"[404] /zeitstempel f1 141ms","label":null,"level":"info"}
+{"message":"[404] /zeitstempel f1 141ms","label":null,"level":"info"}
+{"message":"[404] /zeitstempel f1 140ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 17ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/colored-text f2`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/colored-text f2 6ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/colored-text f2`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/colored-text f2 7ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/colored-text f2`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/colored-text f2 7ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/colored-text f2`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/colored-text f2 11ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 10ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/markdown f3`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/markdown f3 5ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/markdown f3`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/markdown f3 6ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/markdown f3`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/markdown f3 7ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/markdown f3`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/markdown f3 9ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 7ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/mentions f4`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/mentions f4 8ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/mentions f4`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/mentions f4 5ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/mentions f4`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/mentions f4 6ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/mentions f4`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/mentions f4 8ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 5ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeichenzaehler f5`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeichenzaehler f5 37ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeichenzaehler f5`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeichenzaehler f5 13ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeichenzaehler f5`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeichenzaehler f5 9ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeichenzaehler f5`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeichenzaehler f5 5ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 19ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 12ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 7ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 11ms","label":null,"level":"info"}
+{"message":"[200] /zeichenzaehler 15ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 6ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 26ms","label":null,"level":"info"}
+{"message":"[200] /zeichenzaehler 5ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 7ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 26ms","label":null,"level":"info"}
+{"message":"[200] /en/mentions 74ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 8ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 16ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 7ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeitstempel f1`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeitstempel f1 79ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeitstempel f1`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeitstempel f1 4ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeitstempel f1`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeitstempel f1 11ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeitstempel f1`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeitstempel f1 9ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 18ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/colored-text f2`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/colored-text f2 13ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/colored-text f2`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/colored-text f2 14ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/colored-text f2`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/colored-text f2 7ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/colored-text f2`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/colored-text f2 7ms","label":null,"level":"info"}
+{"message":"[200] /webhook-manager 7ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/markdown f3`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/markdown f3 6ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/markdown f3`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/markdown f3 5ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/markdown f3`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/markdown f3 9ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/markdown f3`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/markdown f3 6ms","label":null,"level":"info"}
+{"message":"[200] /webhook-manager 4ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/mentions f4`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/mentions f4 6ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/mentions f4`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/mentions f4 12ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/mentions f4`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/mentions f4 5ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/en/mentions f4`.\n\nPossible dynamic routes being matched: src/pages/en/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /en/mentions f4 5ms","label":null,"level":"info"}
+{"message":"[200] /webhook-manager 5ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeichenzaehler f5`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeichenzaehler f5 26ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeichenzaehler f5`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeichenzaehler f5 7ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeichenzaehler f5`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeichenzaehler f5 6ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/zeichenzaehler f5`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /zeichenzaehler f5 7ms","label":null,"level":"info"}
+{"message":"[200] /webhook-manager 16ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 21ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 12ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 10ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 7ms","label":null,"level":"info"}
+{"message":"[200] /zeichenzaehler 30ms","label":null,"level":"info"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/favicon.ico`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/manifest.webmanifest`.\n\nPossible dynamic routes being matched: src/pages/[tool].astro.","label":"router","level":"warn"}
+{"message":"[404] /manifest.webmanifest 5ms","label":null,"level":"info"}
+{"message":"[200] /status 7ms","label":null,"level":"info"}
+{"message":"[200] /status 29ms","label":null,"level":"info"}
+{"message":"[200] /status 9ms","label":null,"level":"info"}
+{"message":"[200] /status 33ms","label":null,"level":"info"}
+{"message":"[200] /status 25ms","label":null,"level":"info"}
+{"message":"[200] /profilbild 12ms","label":null,"level":"info"}
+{"message":"[200] /en/snowflake 124ms","label":null,"level":"info"}
+{"message":"[200] /en/snowflake 12ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 22ms","label":null,"level":"info"}
+{"message":"[200] /en/snowflake 9ms","label":null,"level":"info"}
+{"message":"[200] /en/snowflake 5ms","label":null,"level":"info"}
+{"message":"[200] /en/invite-lookup 4ms","label":null,"level":"info"}
+{"message":"[200] /en/invite-lookup 3ms","label":null,"level":"info"}
+{"message":"[200] /en/invite-lookup 3ms","label":null,"level":"info"}
+{"message":"[200] /en/invite-lookup 3ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /zeitstempel 7ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 4ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 4ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 4ms","label":null,"level":"info"}
+{"message":"/src/components/tools/AvatarTools.tsx","label":"watch","level":"info"}
+{"message":"[200] /en/avatar-tool 5ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 4ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 4ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"/src/components/tools/AvatarTools.css","label":"watch","level":"info"}
+{"message":"[200] /en/avatar-tool 25ms","label":null,"level":"info"}
+{"message":"[200] /en/status 3ms","label":null,"level":"info"}
+{"message":"[200] /profilbild 18ms","label":null,"level":"info"}
+{"message":"[200] /en/status 3ms","label":null,"level":"info"}
+{"message":"[200] /en/status 4ms","label":null,"level":"info"}
+{"message":"[200] /en/status 4ms","label":null,"level":"info"}
+{"message":"/src/components/discord/Markdown.tsx","label":"watch","level":"info"}
+{"message":"[200] /einladung-pruefen 6ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 7ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 4ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 18ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 4ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 5ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 4ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 5ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 5ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 5ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 5ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 3ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 4ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 3ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 7ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 5ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 4ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 4ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 4ms","label":null,"level":"info"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"Could not import `./SlashCommands.css`.\n  Hint:\n    This is often caused by a typo in the import path. Please make sure the file exists.\n  Error reference:\n    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/\n  Stack trace:\n    at loadAndTransform (file:///Users/maximilian/code/discordtools/node_modules/vite/dist/node/chunks/node.js:20144:31)","label":null,"level":"error"}
+{"message":"[200] /en/server-widget 20ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 4ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /slash-command-builder 22ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 5ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 4ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 3ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 4ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 6ms","label":null,"level":"info"}
+{"message":"/src/components/tools/SlashCommands.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/SlashCommands.tsx","label":"watch","level":"info"}
+{"message":"[200] /en/slash-command-builder 8ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /slash-command-builder 5ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /en/status 4ms","label":null,"level":"info"}
+{"message":"[200] /en/status 4ms","label":null,"level":"info"}
+{"message":"/src/components/tools/SlashCommands.tsx","label":"watch","level":"info"}
+{"message":"[200] /en/status 8ms","label":null,"level":"info"}
+{"message":"[200] /en/status 4ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 5ms","label":null,"level":"info"}
+{"message":"/src/components/tools/ColorConverter.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/ColorConverter.css","label":"watch","level":"info"}
+{"message":"[200] /en/embed-colors 28ms","label":null,"level":"info"}
+{"message":"[200] /slash-command-builder 22ms","label":null,"level":"info"}
+{"message":"[200] /slash-command-builder 34ms","label":null,"level":"info"}
+{"message":"[200] /server-tag 9ms","label":null,"level":"info"}
+{"message":"/src/components/tools/ColorConverter.tsx","label":"watch","level":"info"}
+{"message":"[200] /snowflake 6ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 5ms","label":null,"level":"info"}
+{"message":"[200] /snowflake 5ms","label":null,"level":"info"}
+{"message":"/src/components/tools/ServerTags.tsx","label":"watch","level":"info"}
+{"message":"[200] /snowflake 7ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 4ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 3ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 3ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 3ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 3ms","label":null,"level":"info"}
+{"message":"/src/components/tools/FancyText.tsx","label":"watch","level":"info"}
+{"message":"[200] /server-widget 5ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /slash-command-builder 8ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 8ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 13ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 5ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 5ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 5ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 4ms","label":null,"level":"info"}
+{"message":"[200] /webhook-manager 4ms","label":null,"level":"info"}
+{"message":"[200] /webhook-manager 4ms","label":null,"level":"info"}
+{"message":"[200] /webhook-manager 4ms","label":null,"level":"info"}
+{"message":"[200] /webhook-manager 4ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 7ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 5ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 6ms","label":null,"level":"info"}
+{"message":"[200] /embed-farben 5ms","label":null,"level":"info"}
+{"message":"[200] /status 4ms","label":null,"level":"info"}
+{"message":"[200] /status 4ms","label":null,"level":"info"}
+{"message":"[200] /status 4ms","label":null,"level":"info"}
+{"message":"[200] /status 4ms","label":null,"level":"info"}
+{"message":"[200] /en/snowflake 24ms","label":null,"level":"info"}
+{"message":"[200] /en/snowflake 5ms","label":null,"level":"info"}
+{"message":"[200] /en/snowflake 5ms","label":null,"level":"info"}
+{"message":"[200] /en/snowflake 5ms","label":null,"level":"info"}
+{"message":"[200] /en/invite-lookup 3ms","label":null,"level":"info"}
+{"message":"[200] /en/invite-lookup 3ms","label":null,"level":"info"}
+{"message":"[200] /en/invite-lookup 4ms","label":null,"level":"info"}
+{"message":"/src/components/tools/SlashCommands.tsx","label":"watch","level":"info"}
+{"message":"[200] /slash-command-builder 8ms","label":null,"level":"info"}
+{"message":"[200] /en/invite-lookup 3ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 8ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 11ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /en/permissions-calculator 5ms","label":null,"level":"info"}
+{"message":"[200] /en/bot-invite-link 6ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 4ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 3ms","label":null,"level":"info"}
+{"message":"/src/components/tools/SlashCommands.tsx","label":"watch","level":"info"}
+{"message":"[200] /en/emoji-downloader 11ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 3ms","label":null,"level":"info"}
+{"message":"[200] /en/emoji-downloader 3ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/webhook-manager 3ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /en/embed-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /en/status 3ms","label":null,"level":"info"}
+{"message":"[200] /en/status 4ms","label":null,"level":"info"}
+{"message":"[200] /en/status 3ms","label":null,"level":"info"}
+{"message":"[200] /en/status 5ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 4ms","label":null,"level":"info"}
+{"message":"[200] /en/server-widget 4ms","label":null,"level":"info"}
+{"message":"/src/components/tools/EmojiDownloader.tsx","label":"watch","level":"info"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/server-tags.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/server-tags.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/server-tags.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/server-tags.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/server-tags.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/server-tags.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/slash-commands.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/slash-commands.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/slash-commands.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/slash-commands.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"[404] /schriftarten en/fancy-text 8ms","label":null,"level":"info"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/slash-commands.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/slash-commands.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/slash-commands.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"/Users/maximilian/code/discordtools/src/content/tools/slash-commands.ts: Missing semicolon. (1:43)\n\n> 1 | import type { ToolContent } from \"../types\">;\n    |                                            ^\n  2 |\n  Stack trace:\n    at constructor (/Users/maximilian/code/discordtools/node_modules/@babel/parser/lib/index.js:369:19)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"[404] /schriftarten en/fancy-text 6ms","label":null,"level":"info"}
+{"message":"[404] /schriftarten en/fancy-text 4ms","label":null,"level":"info"}
+{"message":"[200] /status 28ms","label":null,"level":"info"}
+{"message":"[200] /emoji-download 15ms","label":null,"level":"info"}
+{"message":"[200] / 11ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 10ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 5ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 5ms","label":null,"level":"info"}
+{"message":"[200] /einladung-pruefen 4ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 4ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 6ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 5ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 5ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 5ms","label":null,"level":"info"}
+{"message":"[200] /intents-rechner 5ms","label":null,"level":"info"}
+{"message":"[200] /intents-rechner 5ms","label":null,"level":"info"}
+{"message":"[200] /intents-rechner 4ms","label":null,"level":"info"}
+{"message":"[200] /intents-rechner 5ms","label":null,"level":"info"}
+{"message":"[200] /slash-command-builder 8ms","label":null,"level":"info"}
+{"message":"[200] /slash-command-builder 5ms","label":null,"level":"info"}
+{"message":"[200] /slash-command-builder 6ms","label":null,"level":"info"}
+{"message":"[200] /slash-command-builder 4ms","label":null,"level":"info"}
+{"message":"[200] /server-widget 3ms","label":null,"level":"info"}
+{"message":"[200] /flags-decoder 4ms","label":null,"level":"info"}
+{"message":"[200] /flags-decoder 6ms","label":null,"level":"info"}
+{"message":"[200] /flags-decoder 4ms","label":null,"level":"info"}
+{"message":"[200] /flags-decoder 3ms","label":null,"level":"info"}
+{"message":"[200] /en/permissions-calculator 18ms","label":null,"level":"info"}
+{"message":"[200] /en/permissions-calculator 5ms","label":null,"level":"info"}
+{"message":"[404] /schriftarten en/fancy-text 2ms","label":null,"level":"info"}
+{"message":"[200] /en/permissions-calculator 5ms","label":null,"level":"info"}
+{"message":"[200] /en/permissions-calculator 4ms","label":null,"level":"info"}
+{"message":"[200] /en/bot-invite-link 5ms","label":null,"level":"info"}
+{"message":"[200] /en/bot-invite-link 4ms","label":null,"level":"info"}
+{"message":"[200] /en/bot-invite-link 5ms","label":null,"level":"info"}
+{"message":"[200] /en/bot-invite-link 8ms","label":null,"level":"info"}
+{"message":"[200] /en/intents-calculator 4ms","label":null,"level":"info"}
+{"message":"[200] /en/intents-calculator 4ms","label":null,"level":"info"}
+{"message":"[200] /en/intents-calculator 4ms","label":null,"level":"info"}
+{"message":"[200] /en/intents-calculator 4ms","label":null,"level":"info"}
+{"message":"[200] /en/slash-command-builder 5ms","label":null,"level":"info"}
+{"message":"[200] /en/slash-command-builder 5ms","label":null,"level":"info"}
+{"message":"[200] /en/slash-command-builder 4ms","label":null,"level":"info"}
+{"message":"[200] /en/slash-command-builder 4ms","label":null,"level":"info"}
+{"message":"[200] /en/flags-decoder 4ms","label":null,"level":"info"}
+{"message":"[200] /en/flags-decoder 3ms","label":null,"level":"info"}
+{"message":"[200] /en/flags-decoder 3ms","label":null,"level":"info"}
+{"message":"[200] /en/flags-decoder 4ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 5ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 6ms","label":null,"level":"info"}
+{"message":"[200] /intents-rechner 4ms","label":null,"level":"info"}
+{"message":"/src/layouts/ToolPage.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] / 10ms","label":null,"level":"info"}
+{"message":"[200] / 6ms","label":null,"level":"info"}
+{"message":"[200] /rechte-rechner 26ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 5ms","label":null,"level":"info"}
+{"message":"[200] /intents-rechner 4ms","label":null,"level":"info"}
+{"message":"[200] /en/permissions-calculator 20ms","label":null,"level":"info"}
+{"message":"[404] /unsichtbares-zeichen en/invisible-character 7ms","label":null,"level":"info"}
+{"message":"[200] /schriftarten 6ms","label":null,"level":"info"}
+{"message":"[200] /en/server-tag 6ms","label":null,"level":"info"}
+{"message":"[200] /en/bot-invite-link 5ms","label":null,"level":"info"}
+{"message":"[200] /en/intents-calculator 4ms","label":null,"level":"info"}
+{"message":"[200] /schriftarten 6ms","label":null,"level":"info"}
+{"message":"[200] /bot-einladen 5ms","label":null,"level":"info"}
+{"message":"[200] /en/fancy-text 6ms","label":null,"level":"info"}
+{"message":"[200] /schriftarten 6ms","label":null,"level":"info"}
+{"message":"[200] /en/fancy-text 5ms","label":null,"level":"info"}
+{"message":"[200] /unsichtbares-zeichen 7ms","label":null,"level":"info"}
+{"message":"[200] /en/invisible-character 5ms","label":null,"level":"info"}
+{"message":"[200] /unsichtbares-zeichen 4ms","label":null,"level":"info"}
+{"message":"[200] /en/invisible-character 4ms","label":null,"level":"info"}
+{"message":"[200] /kanalnamen 5ms","label":null,"level":"info"}
+{"message":"[200] /en/channel-names 4ms","label":null,"level":"info"}
+{"message":"[200] /kanalnamen 4ms","label":null,"level":"info"}
+{"message":"[200] /en/channel-names 4ms","label":null,"level":"info"}
+{"message":"[200] /rollenfarben 6ms","label":null,"level":"info"}
+{"message":"[200] /en/role-colors 4ms","label":null,"level":"info"}
+{"message":"[200] /rollenfarben 5ms","label":null,"level":"info"}
+{"message":"[200] /en/role-colors 4ms","label":null,"level":"info"}
+{"message":"[200] /regeln 8ms","label":null,"level":"info"}
+{"message":"[200] /en/rules-generator 5ms","label":null,"level":"info"}
+{"message":"[200] /regeln 5ms","label":null,"level":"info"}
+{"message":"[200] /en/rules-generator 5ms","label":null,"level":"info"}
+{"message":"[200] /profilbild 5ms","label":null,"level":"info"}
+{"message":"[200] /en/avatar-tool 4ms","label":null,"level":"info"}
+{"message":"[200] /profilbild 4ms","label":null,"level":"info"}
+{"message":"[200] /en/avatar-tool 3ms","label":null,"level":"info"}
+{"message":"[200] /server-tag 5ms","label":null,"level":"info"}
+{"message":"[200] /en/server-tag 5ms","label":null,"level":"info"}
+{"message":"[200] /server-tag 5ms","label":null,"level":"info"}
+{"message":"[200] /en/server-tag 5ms","label":null,"level":"info"}
+{"message":"[200] /profilbild 6ms","label":null,"level":"info"}
+{"message":"/src/components/tools/AvatarTools.css","label":"watch","level":"info"}
+{"message":"/src/components/tools/InvisibleCharacter.css","label":"watch","level":"info"}
+{"message":"[200] /schriftarten 47ms","label":null,"level":"info"}
+{"message":"[200] /en/fancy-text 22ms","label":null,"level":"info"}
+{"message":"[200] /schriftarten 6ms","label":null,"level":"info"}
+{"message":"[200] /en/fancy-text 5ms","label":null,"level":"info"}
+{"message":"[200] /unsichtbares-zeichen 5ms","label":null,"level":"info"}
+{"message":"[200] /en/invisible-character 4ms","label":null,"level":"info"}
+{"message":"[200] /unsichtbares-zeichen 4ms","label":null,"level":"info"}
+{"message":"[200] /en/invisible-character 4ms","label":null,"level":"info"}
+{"message":"[200] /kanalnamen 5ms","label":null,"level":"info"}
+{"message":"[200] /en/channel-names 4ms","label":null,"level":"info"}
+{"message":"[200] /kanalnamen 3ms","label":null,"level":"info"}
+{"message":"[200] /en/channel-names 4ms","label":null,"level":"info"}
+{"message":"[200] /rollenfarben 5ms","label":null,"level":"info"}
+{"message":"[200] /en/role-colors 5ms","label":null,"level":"info"}
+{"message":"[200] /rollenfarben 4ms","label":null,"level":"info"}
+{"message":"[200] /en/role-colors 4ms","label":null,"level":"info"}
+{"message":"/src/layouts/ToolPage.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /regeln 20ms","label":null,"level":"info"}
+{"message":"[200] /en/rules-generator 19ms","label":null,"level":"info"}
+{"message":"[200] /regeln 5ms","label":null,"level":"info"}
+{"message":"[200] /en/rules-generator 5ms","label":null,"level":"info"}
+{"message":"[200] /profilbild 6ms","label":null,"level":"info"}
+{"message":"[200] /en/avatar-tool 4ms","label":null,"level":"info"}
+{"message":"[200] /profilbild 4ms","label":null,"level":"info"}
+{"message":"[200] /en/avatar-tool 4ms","label":null,"level":"info"}
+{"message":"[200] /server-tag 6ms","label":null,"level":"info"}
+{"message":"[200] /en/server-tag 5ms","label":null,"level":"info"}
+{"message":"[200] /server-tag 4ms","label":null,"level":"info"}
+{"message":"[200] /en/server-tag 5ms","label":null,"level":"info"}
+{"message":"[200] /profilbild 3ms","label":null,"level":"info"}
+{"message":"/src/components/tools/AvatarTools.css","label":"watch","level":"info"}
+{"message":"[200] /schriftarten 27ms","label":null,"level":"info"}
+{"message":"[200] /en/fancy-text 21ms","label":null,"level":"info"}
+{"message":"[200] /schriftarten 6ms","label":null,"level":"info"}
+{"message":"[200] /en/fancy-text 6ms","label":null,"level":"info"}
+{"message":"[200] /unsichtbares-zeichen 4ms","label":null,"level":"info"}
+{"message":"[200] /en/invisible-character 4ms","label":null,"level":"info"}
+{"message":"[200] /unsichtbares-zeichen 3ms","label":null,"level":"info"}
+{"message":"[200] /en/invisible-character 4ms","label":null,"level":"info"}
+{"message":"[200] /kanalnamen 4ms","label":null,"level":"info"}
+{"message":"[200] /en/channel-names 4ms","label":null,"level":"info"}
+{"message":"[200] /kanalnamen 4ms","label":null,"level":"info"}
+{"message":"[200] /en/channel-names 4ms","label":null,"level":"info"}
+{"message":"[200] /rollenfarben 4ms","label":null,"level":"info"}
+{"message":"[200] /en/role-colors 4ms","label":null,"level":"info"}
+{"message":"[200] /rollenfarben 4ms","label":null,"level":"info"}
+{"message":"[200] /en/role-colors 4ms","label":null,"level":"info"}
+{"message":"[200] /regeln 5ms","label":null,"level":"info"}
+{"message":"[200] /en/rules-generator 5ms","label":null,"level":"info"}
+{"message":"[200] /regeln 4ms","label":null,"level":"info"}
+{"message":"[200] /en/rules-generator 4ms","label":null,"level":"info"}
+{"message":"[200] /profilbild 3ms","label":null,"level":"info"}
+{"message":"[200] /en/avatar-tool 3ms","label":null,"level":"info"}
+{"message":"[200] /profilbild 3ms","label":null,"level":"info"}
+{"message":"[200] /en/avatar-tool 3ms","label":null,"level":"info"}
+{"message":"[200] /server-tag 5ms","label":null,"level":"info"}
+{"message":"[200] /en/server-tag 5ms","label":null,"level":"info"}
+{"message":"[200] /server-tag 4ms","label":null,"level":"info"}
+{"message":"[200] /en/server-tag 4ms","label":null,"level":"info"}
+{"message":"[200] /server-tag 4ms","label":null,"level":"info"}
+{"message":"[200] /unsichtbares-zeichen 4ms","label":null,"level":"info"}
+{"message":"/src/components/tools/ServerTags.tsx","label":"watch","level":"info"}
+{"message":"/src/components/tools/ServerTags.css","label":"watch","level":"info"}
+{"message":"[200] /en/server-tag 27ms","label":null,"level":"info"}
+{"message":"[200] /server-tag 18ms","label":null,"level":"info"}
+{"message":"[200] /regeln 5ms","label":null,"level":"info"}
+{"message":"[200] /embed-builder 14ms","label":null,"level":"info"}
+{"message":"changed tsconfig file detected: /Users/maximilian/code/discordtools/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"Configuration file updated. Restarting...","label":null,"level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":"server restarted.","label":"vite","level":"info"}

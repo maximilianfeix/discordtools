@@ -1,0 +1,10 @@
+---
+import LegalPage from "../../layouts/LegalPage.astro";
+import LegalText from "../../components/LegalText.astro";
+---
+<LegalPage lang="en" title="Imprint" description="Legal notice of discordtools.de" paths={{ de: "/impressum", en: "/en/imprint" }}>
+  <p>German law requires the following provider information (§ 5 DDG). It is shown in German.</p>
+  <LegalText name="impressum" missing="The provider details will be added on publication." />
+  <h2>Note</h2>
+  <p>discordtools.de is an independent project and is not affiliated with Discord Inc. “Discord” is a trademark of Discord Inc.</p>
+</LegalPage>

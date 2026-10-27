@@ -1,0 +1,48 @@
+---
+import LegalPage from "../layouts/LegalPage.astro";
+import LegalText from "../components/LegalText.astro";
+const updated = "27. Oktober 2026";
+---
+<LegalPage lang="de" title="Datenschutz" description="Datenschutzerklärung von discordtools.de – keine Cookies, kein Tracking." paths={{ de: "/datenschutz", en: "/en/privacy" }}>
+  <p><strong>Kurz gesagt:</strong> Keine Cookies, keine Analyse-Tools, keine Werbung, kein Konto. Fast alle Tools rechnen nur in deinem Browser. Wenn ein Tool Daten bei Discord abfragt oder an Discord sendet, passiert das direkt aus deinem Browser – nicht über unseren Server.</p>
+  <p class="hint">Stand: {updated}</p>
+
+  <h2>1. Verantwortlicher</h2>
+  <LegalText name="impressum" missing="Die Angaben zum Verantwortlichen stehen im Impressum." />
+
+  <h2>2. Hosting und Server</h2>
+  <p>Die Seite besteht aus statischen Dateien und liegt auf einem Server der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, in Deutschland. Beim Aufruf überträgt dein Browser technisch notwendig deine IP-Adresse, die aufgerufene Adresse, Datum und Uhrzeit sowie Browser-Angaben (User-Agent). Diese Daten werden nur verarbeitet, um die Seite auszuliefern. Der Webserver ist so eingerichtet, dass er keine Zugriffsprotokolle speichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sichere und funktionierende Bereitstellung der Website). Mit Hetzner besteht ein Vertrag zur Auftragsverarbeitung.</p>
+
+  <h2>3. Keine Cookies, kein Tracking</h2>
+  <p>Wir setzen keine Cookies und binden keine Analyse-, Werbe- oder Social-Media-Dienste ein. Schriften und Symbole liegen auf unserem eigenen Server; es werden keine Inhalte von Google Fonts oder anderen CDNs geladen.</p>
+
+  <h2>4. Speicher in deinem Browser</h2>
+  <p>Einige Einstellungen speichern wir in deinem Browser (Local Storage bzw. Session Storage) – nur, wenn du sie selbst auslöst, und nur auf deinem Gerät. Wir können diese Daten nicht auslesen.</p>
+  <table class="data">
+    <thead><tr><th>Eintrag</th><th>Inhalt</th><th>Wann</th></tr></thead>
+    <tbody>
+      <tr><td><code>dt-theme</code></td><td>hell oder dunkel</td><td>wenn du das Farbschema umschaltest</td></tr>
+      <tr><td><code>dt-favorites</code></td><td>Kennungen deiner Lieblings-Tools</td><td>wenn du ein Tool als Favorit markierst</td></tr>
+      <tr><td><code>dt-recent</code></td><td>zuletzt geöffnete Tools</td><td>nur für die Dauer des Tabs (Session Storage)</td></tr>
+      <tr><td>Entwürfe</td><td>z. B. ein Embed-Entwurf</td><td>nur, wenn du „Entwurf speichern“ aktivierst</td></tr>
+    </tbody>
+  </table>
+  <p>Eingaben wie IDs, Nachrichten oder Webhook-URLs speichern wir nicht. Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TDDDG (vom Nutzer ausdrücklich gewünschte Funktion). Du kannst die Einträge jederzeit über die Browser-Einstellungen löschen.</p>
+
+  <h2>5. Anfragen an Discord direkt aus deinem Browser</h2>
+  <p>Diese Tools sprechen auf deinen Klick hin direkt mit Discord. Dabei erhält Discord deine IP-Adresse, Browser-Angaben und die jeweilige Eingabe:</p>
+  <ul>
+    <li><strong>Einladungs-Lookup</strong> und <strong>Server-Widget</strong>: Abfrage öffentlicher Serverdaten bei <code>discord.com</code>.</li>
+    <li><strong>Embed-Builder</strong> und <strong>Webhook-Manager</strong>: Senden, Ändern oder Löschen über deine Webhook-URL bei <code>discord.com</code>.</li>
+    <li><strong>Emoji & Sticker laden</strong> und Vorschauen: Bilder von <code>cdn.discordapp.com</code> bzw. <code>media.discordapp.net</code>.</li>
+    <li><strong>Discord-Status</strong>: Abruf von <code>discordstatus.com</code> (betrieben über Atlassian Statuspage).</li>
+  </ul>
+  <p>Anbieter ist die Discord Inc., 444 De Haro Street, Suite 200, San Francisco, CA 94107, USA. Dabei können Daten in die USA übertragen werden. Es gilt die Datenschutzerklärung von Discord: <a href="https://discord.com/privacy" rel="noopener">discord.com/privacy</a>. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. f DSGVO – du nutzt die Funktion bewusst, und ohne die Anfrage kann sie nicht funktionieren.</p>
+  <p>Gibst du in einer Vorschau eigene Bild-Links an (z. B. Avatar- oder Embed-Bilder), lädt dein Browser diese Bilder vom jeweiligen Server.</p>
+
+  <h2>6. Links zu anderen Seiten</h2>
+  <p>Links zu GitHub, Discord oder anderen Seiten öffnen fremde Angebote. Erst dann gelten deren Datenschutzbestimmungen.</p>
+
+  <h2>7. Deine Rechte</h2>
+  <p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f (Art. 21). Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO). Da wir keine personenbezogenen Daten dauerhaft speichern, können wir in der Regel keine Daten zu dir finden – schreib uns trotzdem gern.</p>
+</LegalPage>

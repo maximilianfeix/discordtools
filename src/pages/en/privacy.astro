@@ -1,0 +1,28 @@
+---
+import LegalPage from "../../layouts/LegalPage.astro";
+import LegalText from "../../components/LegalText.astro";
+const updated = "27 October 2026";
+---
+<LegalPage lang="en" title="Privacy" description="Privacy policy of discordtools.de – no cookies, no tracking." paths={{ de: "/datenschutz", en: "/en/privacy" }}>
+  <p><strong>In short:</strong> no cookies, no analytics, no ads, no account. Almost every tool computes only in your browser. When a tool asks Discord for data or sends something to Discord, your browser talks to Discord directly – never through our server.</p>
+  <p class="hint">Last updated: {updated}. The German version is legally binding.</p>
+
+  <h2>1. Controller</h2>
+  <LegalText name="impressum" missing="See the imprint for the controller's details." />
+
+  <h2>2. Hosting</h2>
+  <p>The site consists of static files hosted on a server of Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Germany. To deliver a page your browser necessarily sends your IP address, the requested URL, date and time and browser details (user agent). This data is used only to deliver the site. The web server is configured not to store access logs. Legal basis: Art. 6(1)(f) GDPR. A data processing agreement with Hetzner is in place.</p>
+
+  <h2>3. No cookies, no tracking</h2>
+  <p>We set no cookies and embed no analytics, advertising or social media services. Fonts and icons are served from our own server.</p>
+
+  <h2>4. Storage in your browser</h2>
+  <p>Some settings are stored in your browser (local storage / session storage) – only when you trigger them and only on your device: <code>dt-theme</code> (light/dark, when you switch it), <code>dt-favorites</code> (tool ids you starred), <code>dt-recent</code> (recently opened tools, for the lifetime of the tab), and drafts only if you enable "save draft". We never store inputs such as IDs, messages or webhook URLs. Legal basis: § 25(2) no. 2 TDDDG.</p>
+
+  <h2>5. Requests to Discord from your browser</h2>
+  <p>On your click, these tools talk to Discord directly: invite lookup and server widget (<code>discord.com</code>), embed builder and webhook manager (sending, editing or deleting via your webhook URL on <code>discord.com</code>), emoji & sticker downloader and previews (<code>cdn.discordapp.com</code>, <code>media.discordapp.net</code>), Discord status (<code>discordstatus.com</code>, run on Atlassian Statuspage). Discord then receives your IP address, browser details and your input. Provider: Discord Inc., 444 De Haro Street, Suite 200, San Francisco, CA 94107, USA; data may be transferred to the USA. Discord's privacy policy applies: <a href="https://discord.com/privacy" rel="noopener">discord.com/privacy</a>. Legal basis: Art. 6(1)(b) or (f) GDPR.</p>
+  <p>If you enter your own image links in a preview, your browser loads those images from the respective server.</p>
+
+  <h2>6. Your rights</h2>
+  <p>You have the right of access, rectification, erasure, restriction, data portability and objection (Art. 15–21 GDPR) and may lodge a complaint with a supervisory authority (Art. 77 GDPR).</p>
+</LegalPage>

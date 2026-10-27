@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="160" viewBox="0 0 640 160" role="img" aria-labelledby="title desc">
 <title id="title">discordtools — dark lockup</title>
 <desc id="desc">Command bubble and discordtools wordmark, on a transparent background.</desc>
-<path transform="translate(8 8) scale(0.28125)" fill="#56DFC1" fill-rule="evenodd" d="M152 64H360C409 64 448 103 448 152V296C448 345 409 384 360 384H192L88 448V362C73 346 64 322 64 296V152C64 103 103 64 152 64ZM278 144L182 304H234L330 144Z"/><g font-family="system-ui, sans-serif"><text x="170" y="101" fill="#F1F8F5" font-size="58" font-weight="700" letter-spacing="-2">discordtools</text></g>
+<path transform="translate(8 8) scale(0.28125)" fill="#3EE0A8" fill-rule="evenodd" d="M152 64H360C409 64 448 103 448 152V296C448 345 409 384 360 384H192L88 448V362C73 346 64 322 64 296V152C64 103 103 64 152 64ZM278 144L182 304H234L330 144Z"/><g font-family="system-ui, sans-serif"><text x="170" y="101" fill="#ECEDEF" font-size="58" font-weight="700" letter-spacing="-2">discordtools</text></g>
 </svg>
