@@ -24,4 +24,25 @@ describe("discord markdown", () => {
     expect(isEmojiOnly("🔥 <:ab:175928847299117063>")).toBe(true);
     expect(isEmojiOnly("hi 🔥")).toBe(false);
   });
+  it("does not nest quotes (Discord shows inner '> ' literally)", () => {
+    const b = parseMarkdown("> > inner");
+    expect(b).toEqual([{ type: "quote", children: [{ type: "paragraph", children: [{ type: "text", value: "> inner" }] }] }]);
+    const multi = parseMarkdown(">>> > x\n>>> y");
+    expect(multi).toHaveLength(1);
+    expect(multi[0]!.type).toBe("quote");
+  });
+  it("survives 6000 nested quotes without a stack overflow", () => {
+    const b = parseMarkdown("> ".repeat(6000) + "x");
+    expect(b).toHaveLength(1);
+    expect(b[0]!.type).toBe("quote");
+  });
+  it("survives deeply nested inline formatting", () => {
+    const deep = "||**".repeat(3000) + "x" + "**||".repeat(3000);
+    expect(() => parseInline(deep)).not.toThrow();
+    expect(() => parseMarkdown(deep)).not.toThrow();
+  });
+  it("keeps out-of-range timestamps as literal text", () => {
+    expect(parseInline("<t:9999999999999>")).toEqual([{ type: "text", value: "<t:9999999999999>" }]);
+    expect(parseInline("<t:1700000000>")[0]!.type).toBe("timestamp");
+  });
 });

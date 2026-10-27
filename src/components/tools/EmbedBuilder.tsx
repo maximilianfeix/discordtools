@@ -11,7 +11,7 @@ import {
   SHARE_WARN_CHARS, TEMPLATE_IDS, THREAD_NAME_MAX, cloneEmbed, countChars, decodeShare, discordPathToDraft, draftToEditPayload,
   draftToPayload, embedChars, emptyDraft, emptyEmbed, emptyField, encodeShare, flattenDiscordErrors, getTemplate, importJson,
   isEmbedEmpty, isShareHash, isSnowflake, isoToLocalInput, listExtras, localInputToIso, looksLikeToken, messageToDraft,
-  parseMessageRef, parseWebhookUrl, payloadForShare, removeUnknown, templateNames, totalEmbedChars, validate, valueToDraft,
+  parseMessageRef, parseWebhookUrl, payloadForShare, shareSafety, SHARE_MAX_ENCODED, type SecretHit, removeUnknown, templateNames, totalEmbedChars, validate, valueToDraft,
   webhookEndpoint, withQuery, type Draft, type DraftEmbed, type DraftField, type ImportError, type ImportNote, type Issue,
   type TemplateId,
 } from "../../lib/embed-builder";
@@ -183,6 +183,10 @@ const L = {
     rawResponse: "Antwort von Discord",
     autosave: "Entwurf auf diesem Gerät speichern",
     autosaveHint: "Speichert nur die Nachricht im Browser (localStorage) – nie die Webhook-URL.",
+    secretShare: (where: string) => `Kein Link erstellt: In ${where} steht ein Discord-Token oder eine Webhook-URL. Entferne sie zuerst – sonst kann jeder mit dem Link sie benutzen.`,
+    secretSave: (where: string) => `Entwurf nicht gespeichert: In ${where} steht ein Discord-Token oder eine Webhook-URL. Entferne sie, dann wird wieder gespeichert.`,
+    secretKeys: (keys: string) => `Diese Felder sehen nach Zugangsdaten aus und wurden weggelassen: ${keys}`,
+    shareTooBig: "Die Nachricht ist zu groß für einen Link. Teile lieber das JSON.",
     toSend: "Zum Senden",
     paths: {
       content: "Inhalt", username: "Name", avatarUrl: "Avatar-URL", threadName: "Forumpost-Titel", flags: "Flags", embeds: "Embeds",
@@ -373,6 +377,10 @@ const L = {
     rawResponse: "Discord's response",
     autosave: "Save draft on this device",
     autosaveHint: "Stores only the message in your browser (localStorage) – never the webhook URL.",
+    secretShare: (where: string) => `No link created: ${where} contains a Discord token or webhook URL. Remove it first – anyone with the link could use it.`,
+    secretSave: (where: string) => `Draft not saved: ${where} contains a Discord token or webhook URL. Remove it and saving resumes.`,
+    secretKeys: (keys: string) => `These fields look like credentials and were left out: ${keys}`,
+    shareTooBig: "The message is too big for a link. Share the JSON instead.",
     toSend: "Go to send",
     paths: {
       content: "Content", username: "Name", avatarUrl: "Avatar URL", threadName: "Forum post title", flags: "Flags", embeds: "Embeds",
@@ -756,6 +764,8 @@ export default function EmbedBuilder({ lang }: { lang: Lang }) {
   const [theme, setTheme] = useState<PreviewTheme>("dark");
   const [undo, setUndo] = useState<{ draft: Draft; label: string } | null>(null);
   const [banner, setBanner] = useState<{ kind: "error" | "warn"; text: string } | null>(null);
+  const [saveNote, setSaveNote] = useState<{ kind: "error" | "warn"; text: string } | null>(null);
+  const secretWhere = (hits: SecretHit[]) => [...new Set(hits.map((h) => h.path || "JSON"))].join(", ");
   const [importText, setImportText] = useState("");
   const [importErr, setImportErr] = useState<ImportError | null>(null);
   const [importInfo, setImportInfo] = useState<string[]>([]);
@@ -826,15 +836,29 @@ export default function EmbedBuilder({ lang }: { lang: Lang }) {
     } else if (isShareHash(location.hash)) {
       history.replaceState(null, "", location.pathname + location.search);
     }
-    if (!autosave) return;
-    const t = setTimeout(() => writeJson(DRAFT_KEY, payloadForShare(draft)), 400);
+    if (!autosave) {
+      setSaveNote(null);
+      return;
+    }
+    const t = setTimeout(() => saveDraft(draft), 400);
     return () => clearTimeout(t);
   }, [draft, autosave]);
+
+  /** Writes the draft to localStorage unless it contains a token/webhook URL; secret-looking keys are dropped. */
+  function saveDraft(d: Draft) {
+    const r = shareSafety(payloadForShare(d));
+    if (r.block.length) {
+      setSaveNote({ kind: "error", text: s.secretSave(secretWhere(r.block)) });
+      return;
+    }
+    setSaveNote(r.warn.length ? { kind: "warn", text: s.secretKeys(r.warn.map((h) => h.path).join(", ")) } : null);
+    writeJson(DRAFT_KEY, r.payload);
+  }
 
   const toggleAutosave = (on: boolean) => {
     setAutosave(on);
     writeJson(AUTOSAVE_KEY, on);
-    if (on) writeJson(DRAFT_KEY, payloadForShare(draft));
+    if (on) saveDraft(draft);
     else {
       try {
         localStorage.removeItem(DRAFT_KEY);
@@ -951,11 +975,28 @@ export default function EmbedBuilder({ lang }: { lang: Lang }) {
   };
 
   const share = async () => {
-    const h = await encodeShare(payloadForShare(eff));
+    const safe = shareSafety(payloadForShare(eff));
+    if (safe.block.length) {
+      const text = s.secretShare(secretWhere(safe.block));
+      setBanner({ kind: "error", text });
+      toast(text);
+      return;
+    }
+    const h = await encodeShare(safe.payload);
+    if (h.length > SHARE_MAX_ENCODED) {
+      setBanner({ kind: "error", text: s.shareTooBig });
+      return;
+    }
     const url = `${location.origin}${location.pathname}${location.search}#${h}`;
     history.replaceState(null, "", url);
     hashRef.current = false;
-    setBanner(url.length > SHARE_WARN_CHARS ? { kind: "warn", text: s.shareLong(url.length) } : null);
+    setBanner(
+      safe.warn.length
+        ? { kind: "warn", text: s.secretKeys(safe.warn.map((x) => x.path).join(", ")) }
+        : url.length > SHARE_WARN_CHARS
+          ? { kind: "warn", text: s.shareLong(url.length) }
+          : null,
+    );
     await copyText(url, s.shareCopied, s.copyFail);
   };
 
@@ -1516,6 +1557,11 @@ export default function EmbedBuilder({ lang }: { lang: Lang }) {
                 <span class="hint eb-block">{s.autosaveHint}</span>
               </span>
             </label>
+            {saveNote && (
+              <p class={saveNote.kind === "error" ? "notice error" : "notice"} role="status" aria-live="polite">
+                {saveNote.text}
+              </p>
+            )}
           </div>
         </div>
         <div class="sticky eb-preview-col">

@@ -273,3 +273,17 @@ export function formatDiff(d: CalendarDiff, lang: "de" | "en", max = 3): string 
   }
   return parts.join(", ");
 }
+
+/** IDs from a `/snowflake#<id>[,<id>…]` link, or null. Malformed percent-encoding is ignored instead of throwing. */
+export function idsFromHash(hash: string): string[] | null {
+  let h = hash.replace(/^#/, "");
+  if (!h) return null;
+  if (h.includes("%")) {
+    try {
+      h = decodeURIComponent(h);
+    } catch {
+      return null;
+    }
+  }
+  return /^\d{15,21}(,\d{15,21})*$/.test(h) ? h.split(",") : null;
+}

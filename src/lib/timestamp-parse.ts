@@ -3,7 +3,10 @@
  * Pure functions: every "now" and time zone is passed in, so tests are deterministic.
  */
 import { decodeSnowflake, isSnowflake } from "./snowflake";
-import type { TimestampStyle } from "./timestamp";
+import { isValidMs, isValidUnix, MAX_DATE_MS, type TimestampStyle } from "./timestamp";
+
+/** Instants this close to the JS date limit leave no room for the ±1 day zone math below. */
+const SAFE_MS = MAX_DATE_MS - 2 * 864e5;
 
 export interface Wall {
   y: number;
@@ -128,6 +131,7 @@ export function decodeTimestampInput(raw: string): DecodedInput | null {
   const s = raw.trim();
   if (!s) return null;
   const tag = s.match(/<t:(-?\d{1,13})(?::([tTdDfFRsS]))?>/);
+  if (tag && !isValidUnix(Number(tag[1]))) return null;
   if (tag) return { source: "tag", unix: Number(tag[1]), style: (tag[2] as TimestampStyle | undefined) ?? "f", explicitStyle: !!tag[2] };
   const num = s.replace(/[\s_'’]/g, "");
   if (/^-?\d{1,11}$/.test(num)) return { source: "seconds", unix: Number(num) };
@@ -192,7 +196,7 @@ function monthOf(name: string): number {
 }
 
 const WEEKDAYS: [RegExp, number][] = [
-  [/^(sonntag|sonnabend$|sunday|sun|so)$/, 0],
+  [/^(sonntag|sunday|sun|so)$/, 0],
   [/^(montag|monday|mon|mo)$/, 1],
   [/^(dienstag|tuesday|tues|tue|di)$/, 2],
   [/^(mittwoch|wednesday|wed|mi)$/, 3],
@@ -237,6 +241,19 @@ const FILLER = new Set([
  * "nächsten Samstag", "halb 9", "tomorrow evening". Returns null if any word is not understood.
  */
 export function parseNaturalDate(input: string, opts: ParseOptions): ParseResult | null {
+  let r: ParseResult | null;
+  try {
+    r = parseNaturalDateUnsafe(input, opts);
+  } catch (e) {
+    // Huge offsets ("in 999999999 days") leave the Date range inside the zone math.
+    if (e instanceof RangeError) return null;
+    throw e;
+  }
+  if (!r || Math.abs(r.ms) > SAFE_MS || (r.alt !== undefined && !isValidMs(r.alt))) return null;
+  return r;
+}
+
+function parseNaturalDateUnsafe(input: string, opts: ParseOptions): ParseResult | null {
   let s = " " + normalise(input) + " ";
   if (!s.trim()) return null;
   const { now, tz } = opts;
@@ -418,5 +435,6 @@ export function inputsToWall(date: string, time: string): Wall | null {
   const t = time.match(/^(\d{2}):(\d{2})(?::(\d{2}))?/);
   if (!d || !t) return null;
   const w = { y: +d[1]!, mo: +d[2]!, d: +d[3]!, h: +t[1]!, mi: +t[2]!, s: t[3] ? +t[3] : 0 };
+  if (Math.abs(Date.UTC(w.y, w.mo - 1, w.d, w.h, w.mi, w.s)) > SAFE_MS) return null;
   return validDate(w.y, w.mo, w.d) && w.h < 24 && w.mi < 60 && w.s < 60 ? w : null;
 }

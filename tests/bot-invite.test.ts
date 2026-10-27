@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { DEFAULT_STATE, buildInviteUrl, looksLikeSecret, looksLikeToken, parseInviteUrl, type InviteState } from "../src/lib/bot-invite";
+import { DEFAULT_STATE, buildInviteUrl, inviteHashParams, looksLikeSecret, looksLikeToken, parseInviteUrl, type InviteState } from "../src/lib/bot-invite";
 
 const ID = "1234567890123456789";
 const st = (p: Partial<InviteState>): InviteState => ({ ...DEFAULT_STATE, clientId: ID, ...p });
@@ -95,5 +95,19 @@ describe("parseInviteUrl", () => {
     expect(parseInviteUrl("https://example.com/oauth2/authorize")).toEqual({ ok: false, reason: "not-oauth" });
     expect(parseInviteUrl("https://discord.gg/abc")).toEqual({ ok: false, reason: "not-oauth" });
     expect(parseInviteUrl("::::")).toEqual({ ok: false, reason: "not-url" });
+  });
+});
+
+describe("inviteHashParams", () => {
+  it("only writes guild_id when it is a real snowflake (never pasted secrets)", () => {
+    expect(inviteHashParams(st({ guildId: "613425648685547541" })).guild_id).toBe("613425648685547541");
+    const hook = "https://discord.com/api/webhooks/123456789012345678/" + "a".repeat(68);
+    const token = ["MTAxMjM0NTY3ODkwMTIzNDU2Nzg5", "GaBcDe", "abcdefghijklmnopqrstuvwxyz0123456789"].join(".");
+    for (const g of [hook, token, "abc", "12", ""]) expect(inviteHashParams(st({ guildId: g })).guild_id).toBeNull();
+  });
+  it("keeps the other params", () => {
+    const h = inviteHashParams(st({ permissions: "8", integrationType: 1, disableGuildSelect: true }));
+    expect(h).toMatchObject({ client_id: ID, permissions: "8", integration_type: "1", disable_guild_select: "true" });
+    expect(inviteHashParams(st({ clientId: "not-an-id" })).client_id).toBeNull();
   });
 });

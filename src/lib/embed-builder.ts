@@ -236,6 +236,51 @@ export function looksLikeToken(s: string): boolean {
   return TOKEN_RE.test(s);
 }
 
+export interface SecretHit {
+  /** Dotted path inside the payload, e.g. "embeds.0.fields.2.value" or "webhook_url" */
+  path: string;
+  kind: "token" | "webhook" | "secretKey";
+}
+
+/** Key names that suggest a credential (never part of a Discord message payload). */
+const SECRET_KEY_RE = /webhook|token|secret|password|passwd|api[_-]?key|authorization/i;
+
+/**
+ * Checks a payload before it leaves the editor (share link, localStorage draft). Strings that contain a
+ * Discord token or webhook URL anywhere (also nested and inside unknown keys) end up in `block` – the caller
+ * must not write anything then. Keys whose name looks like a secret are dropped from `payload` and listed in `warn`.
+ */
+export function shareSafety(value: unknown): { block: SecretHit[]; warn: SecretHit[]; payload: Rec } {
+  const block: SecretHit[] = [];
+  const warn: SecretHit[] = [];
+  const walk = (v: unknown, path: string, depth: number): unknown => {
+    if (typeof v === "string") {
+      if (TOKEN_RE.test(v)) block.push({ path, kind: "token" });
+      else if (WEBHOOK_RE.test(v)) block.push({ path, kind: "webhook" });
+      return v;
+    }
+    if (!v || typeof v !== "object") return v;
+    if (depth > 64) {
+      block.push({ path, kind: "secretKey" }); // absurdly deep: refuse rather than guess
+      return v;
+    }
+    const at = (k: string | number) => (path ? `${path}.${k}` : String(k));
+    if (Array.isArray(v)) return v.map((x, i) => walk(x, at(i), depth + 1));
+    const out: Rec = {};
+    for (const [k, x] of Object.entries(v as Rec)) {
+      if (SECRET_KEY_RE.test(k)) {
+        warn.push({ path: at(k), kind: "secretKey" });
+        walk(x, at(k), depth + 1); // still block if a real token hides in there
+        continue;
+      }
+      out[k] = walk(x, at(k), depth + 1);
+    }
+    return out;
+  };
+  const payload = walk(value, "", 0);
+  return { block, warn, payload: payload && typeof payload === "object" && !Array.isArray(payload) ? (payload as Rec) : {} };
+}
+
 function urlState(s: string): "ok" | "bad" | "attachment" | "empty" {
   const v = s.trim();
   if (!v) return "empty";
@@ -622,17 +667,48 @@ export async function encodeShare(payload: unknown): Promise<string> {
   return `${SHARE_PREFIX}j.${bytesToB64url(raw)}`;
 }
 
-/** Hash ("#m=…" or "m=…") → payload value, or null if it isn't ours / is broken. */
+/** Longest share hash we read at all (a real message is far below this). */
+export const SHARE_MAX_ENCODED = 16 * 1024;
+/** Most bytes we inflate from a share hash before giving up (guards against decompression bombs). */
+export const SHARE_MAX_DECODED = 256 * 1024;
+
+/** Inflates `bytes` but stops (and returns null) as soon as more than `max` bytes come out. */
+async function inflateCapped(bytes: Uint8Array, max: number): Promise<Uint8Array | null> {
+  const reader = new Blob([bytes as BlobPart]).stream().pipeThrough(new DecompressionStream("deflate-raw")).getReader();
+  const parts: Uint8Array[] = [];
+  let total = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > max) {
+      await reader.cancel().catch(() => {});
+      return null;
+    }
+    parts.push(value);
+  }
+  const out = new Uint8Array(total);
+  let off = 0;
+  for (const p of parts) {
+    out.set(p, off);
+    off += p.byteLength;
+  }
+  return out;
+}
+
+/** Hash ("#m=…" or "m=…") → payload value, or null if it isn't ours / is broken / too big. */
 export async function decodeShare(hash: string): Promise<unknown | null> {
   const h = hash.replace(/^#/, "");
   if (!h.startsWith(SHARE_PREFIX)) return null;
+  if (h.length > SHARE_MAX_ENCODED) return null;
   const body = h.slice(SHARE_PREFIX.length);
   const kind = body.slice(0, 2);
   const data = body.slice(2);
   try {
-    let bytes = b64urlToBytes(data);
-    if (kind === "z.") bytes = await pipe(bytes, new DecompressionStream("deflate-raw"));
+    let bytes: Uint8Array | null = b64urlToBytes(data);
+    if (kind === "z.") bytes = await inflateCapped(bytes, SHARE_MAX_DECODED);
     else if (kind !== "j.") return null;
+    if (!bytes) return null;
     return JSON.parse(new TextDecoder().decode(bytes));
   } catch {
     return null;

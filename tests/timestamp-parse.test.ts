@@ -133,3 +133,31 @@ describe("parseNaturalDate – English", () => {
     expect(r?.kind).toBe("ambiguous");
   });
 });
+
+describe("out-of-range instants", () => {
+  it("rejects <t:…> tags and numbers beyond the JS date range", () => {
+    expect(decodeTimestampInput("<t:9999999999999>")).toBeNull();
+    expect(decodeTimestampInput("<t:8640000000000>")).not.toBeNull();
+    expect(decodeTimestampInput("<t:-8640000000001>")).toBeNull();
+  });
+  it("returns null instead of throwing or returning invalid dates", () => {
+    expect(() => parseNaturalDate("in 999999999 days", { now: NOW, tz: TZ })).not.toThrow();
+    expect(parseNaturalDate("in 999999999 days", { now: NOW, tz: TZ })).toBeNull();
+    expect(parseNaturalDate("in 99999999999 hours", { now: NOW, tz: TZ })).toBeNull();
+    expect(parseNaturalDate("vor 999999999 jahren", { now: NOW, tz: TZ })).toBeNull();
+    expect(p("in 2 tagen")).toBe("2026-10-29 15:12");
+  });
+  it("rejects date inputs beyond the range", () => {
+    expect(inputsToWall("275760-12-31", "00:00")).toBeNull();
+    expect(inputsToWall("275760-09-12", "00:00")).toBeNull(); // last representable day: no room for zone math
+    expect(inputsToWall("2026-10-27", "20:00")).not.toBeNull();
+  });
+});
+
+describe("weekday words", () => {
+  it("reads Sonnabend as Saturday", () => {
+    // NOW is Tuesday 2026-10-27
+    expect(p("sonnabend 18 uhr")).toBe("2026-10-31 18:00");
+    expect(p("sonntag 18 uhr")).toBe("2026-11-01 18:00");
+  });
+});

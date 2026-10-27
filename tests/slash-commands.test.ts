@@ -202,6 +202,31 @@ describe("import", () => {
     expect(importCommand("[1]")).toEqual({ ok: false, error: "shape" });
   });
 
+  it("rejects fractional or unknown enum values instead of crashing later", () => {
+    const base = { name: "a", description: "b" };
+    const bad = [
+      { ...base, options: [{ type: 3.5, name: "x", description: "y" }] },
+      { ...base, options: [{ type: 12, name: "x", description: "y" }] },
+      { ...base, options: [{ type: "3", name: "x", description: "y" }] },
+      { ...base, options: [{ type: 7, name: "x", description: "y", channel_types: [0.5] }] },
+      { ...base, options: [{ type: 7, name: "x", description: "y", channel_types: [99] }] },
+      { ...base, options: [{ type: 1, name: "s", description: "y", options: [{ type: 4.2, name: "x", description: "y" }] }] },
+      { ...base, type: 1.5 },
+      { ...base, type: 9 },
+      { ...base, contexts: [0.5] },
+      { ...base, contexts: [3] },
+      { ...base, integration_types: [0.5] },
+      { ...base, integration_types: [2] },
+    ];
+    for (const b of bad) expect(importCommand(JSON.stringify(b)), JSON.stringify(b)).toEqual({ ok: false, error: "shape" });
+    const ok = importCommand(JSON.stringify({ ...base, contexts: [0, 2], integration_types: [1], options: [{ type: 7, name: "c", description: "d", channel_types: [0, 5] }] }));
+    expect(ok.ok).toBe(true);
+    if (ok.ok) {
+      expect(ok.draft.contexts).toEqual([0, 2]);
+      expect(() => toDiscordJs(ok.draft)).not.toThrow();
+    }
+  });
+
   it("maps legacy dm_permission", () => {
     const r = importCommand(JSON.stringify({ name: "a", description: "b", dm_permission: false }));
     expect(r.ok && r.draft.contexts).toEqual([0]);

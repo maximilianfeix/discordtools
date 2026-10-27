@@ -3,7 +3,7 @@ import type { Lang } from "../../i18n/ui";
 import Icon from "../Icon";
 import CopyButton from "../ui/CopyButton";
 import { Notice, localeOf, toolHref } from "./lookup-ui";
-import { calendarDiff, compareSnowflakes, formatDiff, parseSnowflakeInput, snowflakeRange, type IdKind, type ParsedId, type ParseProblem } from "../../lib/snowflake-input";
+import { calendarDiff, compareSnowflakes, formatDiff, idsFromHash, parseSnowflakeInput, snowflakeRange, type IdKind, type ParsedId, type ParseProblem } from "../../lib/snowflake-input";
 import { decodeSnowflake, isSnowflake, DISCORD_EPOCH } from "../../lib/snowflake";
 import "./Snowflake.css";
 
@@ -282,8 +282,8 @@ export default function Snowflake({ lang }: { lang: Lang }) {
 
   useEffect(() => {
     // Allow /snowflake#<id> links from other tools (IDs are not secret).
-    const h = decodeURIComponent(location.hash.slice(1));
-    if (/^\d{15,21}(,\d{15,21})*$/.test(h)) setText(h.split(",").join("\n"));
+    const ids = idsFromHash(location.hash);
+    if (ids) setText(ids.join("\n"));
     const iv = setInterval(() => setNow(Date.now()), 30_000);
     return () => clearInterval(iv);
   }, []);

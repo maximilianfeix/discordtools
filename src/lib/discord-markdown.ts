@@ -2,7 +2,7 @@
  * A small Discord-flavoured markdown parser. It produces a plain AST that the preview renders
  * as text nodes only (no HTML injection), so pasted content is always inert.
  */
-import { parseTimestampTags, type TimestampStyle } from "./timestamp";
+import { isValidUnix, parseTimestampTags, type TimestampStyle } from "./timestamp";
 import { ansiToSpans, type AnsiSpan } from "./ansi";
 
 export type Inline =
@@ -25,6 +25,8 @@ export type Block =
 
 interface Rule {
   re: RegExp;
+  /** Optional extra check; if it fails the match is treated as plain text. */
+  ok?: (m: RegExpExecArray) => boolean;
   build: (m: RegExpExecArray, inner: (s: string) => Inline[]) => Inline;
 }
 
@@ -54,6 +56,7 @@ const RULES: Rule[] = [
   { re: /^@here/, build: () => ({ type: "mention", kind: "here", id: "here" }) },
   {
     re: /^<t:(-?\d{1,13})(?::([tTdDfFRsS]))?>/,
+    ok: (m) => isValidUnix(Number(m[1])),
     build: (m) => ({ type: "timestamp", unix: Number(m[1]), style: (m[2] as TimestampStyle | undefined) ?? "f" }),
   },
   { re: /^<(a?):(\w{2,32}):(\d{15,21})>/, build: (m) => ({ type: "emoji", animated: m[1] === "a", name: m[2]!, id: m[3]! }) },
@@ -63,7 +66,12 @@ const RULES: Rule[] = [
 
 const SPECIAL = /[*_`~|[<h@\\\n]/;
 
-export function parseInline(src: string): Inline[] {
+/** Deeper inline nesting than this is shown as plain text (keeps the recursion bounded). */
+const MAX_INLINE_DEPTH = 32;
+
+export function parseInline(src: string, depth = 0): Inline[] {
+  if (depth > MAX_INLINE_DEPTH) return src ? [{ type: "text", value: src }] : [];
+  const inner = (s: string) => parseInline(s, depth + 1);
   const out: Inline[] = [];
   let text = "";
   const flush = () => {
@@ -83,9 +91,9 @@ export function parseInline(src: string): Inline[] {
     if (SPECIAL.test(rest[0]!)) {
       for (const rule of RULES) {
         const m = rule.re.exec(rest);
-        if (m && m[0].length) {
+        if (m && m[0].length && (!rule.ok || rule.ok(m))) {
           flush();
-          out.push(rule.build(m as RegExpExecArray, parseInline));
+          out.push(rule.build(m, inner));
           i += m[0].length;
           matched = true;
           break;
@@ -101,9 +109,14 @@ export function parseInline(src: string): Inline[] {
   return out;
 }
 
-/** Parses a message into blocks. `embed` disables headings/subtext like Discord does in some embed fields. */
-export function parseMarkdown(src: string, opts: { headings?: boolean } = {}): Block[] {
+/**
+ * Parses a message into blocks. `headings: false` disables headings/subtext like Discord does in some embed fields.
+ * Quotes do not nest (like in Discord): inside a quote, "> " and ">>> " are plain text, so recursion stays one level deep.
+ */
+export function parseMarkdown(src: string, opts: { headings?: boolean; inQuote?: boolean } = {}): Block[] {
   const headings = opts.headings ?? true;
+  const quotes = !opts.inQuote;
+  const innerOpts = { ...opts, inQuote: true };
   const blocks: Block[] = [];
   const lines = src.replace(/\r\n?/g, "\n").split("\n");
   let para: string[] = [];
@@ -151,13 +164,13 @@ export function parseMarkdown(src: string, opts: { headings?: boolean } = {}): B
     }
 
     // block quote: ">>> " quotes everything after it
-    if (line.startsWith(">>> ")) {
+    if (quotes && line.startsWith(">>> ")) {
       flushPara();
       const rest = [line.slice(4), ...lines.slice(i + 1)].join("\n");
-      blocks.push({ type: "quote", children: parseMarkdown(rest, opts) });
+      blocks.push({ type: "quote", children: parseMarkdown(rest, innerOpts) });
       break;
     }
-    if (line.startsWith("> ") || line === ">") {
+    if (quotes && (line.startsWith("> ") || line === ">")) {
       flushPara();
       const quoted: string[] = [];
       while (i < lines.length && (lines[i]!.startsWith("> ") || lines[i] === ">")) {
@@ -165,7 +178,7 @@ export function parseMarkdown(src: string, opts: { headings?: boolean } = {}): B
         i++;
       }
       i--;
-      blocks.push({ type: "quote", children: parseMarkdown(quoted.join("\n"), opts) });
+      blocks.push({ type: "quote", children: parseMarkdown(quoted.join("\n"), innerOpts) });
       continue;
     }
 

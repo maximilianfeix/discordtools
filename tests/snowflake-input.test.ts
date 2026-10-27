@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calendarDiff, compareSnowflakes, formatDiff, parseSnowflakeInput, snowflakeRange } from "../src/lib/snowflake-input";
+import { calendarDiff, compareSnowflakes, formatDiff, idsFromHash, parseSnowflakeInput, snowflakeRange } from "../src/lib/snowflake-input";
 import { decodeSnowflake } from "../src/lib/snowflake";
 
 const NOW = Date.UTC(2026, 9, 27);
@@ -80,5 +80,17 @@ describe("calendarDiff / formatDiff", () => {
   it("is order-independent and handles zero", () => {
     expect(calendarDiff(10_000, 0)).toEqual(calendarDiff(0, 10_000));
     expect(formatDiff(calendarDiff(0, 0), "en")).toBe("0 seconds");
+  });
+});
+
+describe("idsFromHash", () => {
+  it("reads comma-separated IDs and ignores malformed hashes without throwing", () => {
+    expect(idsFromHash("#175928847299117063,613425648685547541")).toEqual(["175928847299117063", "613425648685547541"]);
+    expect(idsFromHash("#175928847299117063%2C613425648685547541")).toEqual(["175928847299117063", "613425648685547541"]);
+    expect(() => idsFromHash("#%")).not.toThrow();
+    expect(idsFromHash("#%")).toBeNull();
+    expect(idsFromHash("#%E0%A4%A")).toBeNull();
+    expect(idsFromHash("#abc")).toBeNull();
+    expect(idsFromHash("")).toBeNull();
   });
 });

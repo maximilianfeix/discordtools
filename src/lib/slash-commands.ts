@@ -514,9 +514,24 @@ const asLoc = (v: unknown): Loc => {
 };
 const str = (v: unknown) => (typeof v === "string" ? v : typeof v === "number" ? String(v) : "");
 
-function importOption(raw: Record<string, unknown>): OptionDraft {
-  const t = Number(raw.type);
-  const type = (t >= 1 && t <= 11 ? t : 3) as OptionType;
+/** Thrown inside the importer when a value is not one of Discord's enum members. */
+class ShapeError extends Error {}
+
+const OPTION_TYPE_IDS = new Set<number>(OPTION_TYPES.map((t) => t.type));
+const CHANNEL_TYPE_IDS = new Set(CHANNEL_TYPES.map((t) => t.id));
+const CONTEXT_IDS = new Set(CONTEXTS.map((t) => t.id));
+const INTEGRATION_TYPE_IDS = new Set(INTEGRATION_TYPES.map((t) => t.id));
+
+/** `v` must be an integer that is in `allowed` – otherwise the whole import fails with a shape error. */
+function member(v: unknown, allowed: Set<number>): number {
+  if (typeof v !== "number" || !Number.isInteger(v) || !allowed.has(v)) throw new ShapeError();
+  return v;
+}
+const members = (v: unknown[], allowed: Set<number>) => [...new Set(v.map((x) => member(x, allowed)))];
+
+function importOption(raw: Record<string, unknown>, depth = 0): OptionDraft {
+  if (depth > 2) throw new ShapeError(); // Discord allows group → subcommand → option, nothing deeper
+  const type = (raw.type === undefined ? 3 : member(raw.type, OPTION_TYPE_IDS)) as OptionType;
   const o = newOption(type, str(raw.name));
   o.nameLoc = asLoc(raw.name_localizations);
   o.description = str(raw.description);
@@ -529,8 +544,8 @@ function importOption(raw: Record<string, unknown>): OptionDraft {
   o.maxValue = str(raw.max_value);
   o.minLength = str(raw.min_length);
   o.maxLength = str(raw.max_length);
-  if (Array.isArray(raw.channel_types)) o.channelTypes = raw.channel_types.map(Number).filter((n) => Number.isInteger(n));
-  if (Array.isArray(raw.options)) o.options = raw.options.filter((x) => x && typeof x === "object").map(importOption);
+  if (Array.isArray(raw.channel_types)) o.channelTypes = members(raw.channel_types, CHANNEL_TYPE_IDS);
+  if (Array.isArray(raw.options)) o.options = raw.options.filter((x) => x && typeof x === "object").map((x) => importOption(x, depth + 1));
   return o;
 }
 
@@ -548,15 +563,23 @@ export function importCommand(text: string): ImportResult {
     data = data[0];
   }
   if (!data || typeof data !== "object" || typeof (data as { name?: unknown }).name !== "string") return { ok: false, error: "shape" };
-  const raw = data as Record<string, unknown>;
-  const t = Number(raw.type ?? 1);
+  try {
+    return importShape(data as Record<string, unknown>, warnings);
+  } catch (e) {
+    if (e instanceof ShapeError) return { ok: false, error: "shape" };
+    throw e;
+  }
+}
+
+function importShape(raw: Record<string, unknown>, warnings: string[]): ImportResult {
+  const t = raw.type === undefined ? 1 : member(raw.type, new Set([1, 2, 3, 4]));
   const c = newCommand((t === 2 || t === 3 ? t : 1) as CommandType);
   if (t === 4) warnings.push("entry-point");
   c.name = str(raw.name);
   c.nameLoc = asLoc(raw.name_localizations);
   c.description = str(raw.description);
   c.descLoc = asLoc(raw.description_localizations);
-  if (Array.isArray(raw.options)) c.options = raw.options.filter((x) => x && typeof x === "object").map(importOption);
+  if (Array.isArray(raw.options)) c.options = raw.options.filter((x) => x && typeof x === "object").map((x) => importOption(x));
   const dmp = raw.default_member_permissions;
   if (dmp === null || dmp === undefined) c.permMode = "everyone";
   else if (String(dmp) === "0") c.permMode = "admins";
@@ -564,8 +587,8 @@ export function importCommand(text: string): ImportResult {
     c.permMode = "custom";
     c.permissions = String(dmp);
   }
-  if (Array.isArray(raw.contexts)) c.contexts = raw.contexts.map(Number).filter((n) => n >= 0 && n <= 2);
-  if (Array.isArray(raw.integration_types)) c.integrationTypes = raw.integration_types.map(Number).filter((n) => n === 0 || n === 1);
+  if (Array.isArray(raw.contexts)) c.contexts = members(raw.contexts, CONTEXT_IDS);
+  if (Array.isArray(raw.integration_types)) c.integrationTypes = members(raw.integration_types, INTEGRATION_TYPE_IDS);
   c.nsfw = raw.nsfw === true;
   if (raw.guild_id) c.scope = "guild";
   if (raw.dm_permission === false && !Array.isArray(raw.contexts)) {

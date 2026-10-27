@@ -3,7 +3,7 @@ import {
   countChars, decodeShare, discordPathToDraft, draftToEditPayload, draftToPayload, emptyDraft, emptyEmbed, emptyField,
   encodeShare, flattenDiscordErrors, getTemplate, importJson, isoToLocalInput, listExtras, localInputToIso, looksLikeToken,
   messageToDraft, parseMessageRef, parseWebhookUrl, removeUnknown, TEMPLATE_IDS, totalEmbedChars, validate, webhookEndpoint,
-  withQuery, type Draft,
+  withQuery, shareSafety, type Draft,
 } from "../src/lib/embed-builder";
 
 const codes = (d: Draft) => validate(d).map((i) => `${i.level}:${i.path}:${i.code}`);
@@ -192,9 +192,44 @@ describe("share hash", () => {
     expect(await decodeShare("#" + h)).toEqual(p);
   });
 
+  it("refuses oversized hashes and decompression bombs", async () => {
+    expect(await decodeShare("#m=j." + "A".repeat(20_000))).toBeNull();
+    // ~2 MiB of whitespace compresses to a tiny hash but must not be inflated completely.
+    const bomb = await encodeShare({ content: "x", pad: " ".repeat(2 * 1024 * 1024) });
+    expect(bomb.length).toBeLessThan(16 * 1024);
+    expect(await decodeShare("#" + bomb)).toBeNull();
+    // normal sized payloads still work
+    const ok = await encodeShare({ content: "y".repeat(5000) });
+    expect(await decodeShare("#" + ok)).toEqual({ content: "y".repeat(5000) });
+  });
+
   it("returns null for foreign or broken hashes", async () => {
     expect(await decodeShare("#section")).toBeNull();
     expect(await decodeShare("#m=z.!!!")).toBeNull();
+  });
+});
+
+describe("shareSafety (share link + autosave)", () => {
+  const TOKEN = ["MTAxMjM0NTY3ODkwMTIzNDU2Nzg5", "GaBcDe", "abcdefghijklmnopqrstuvwxyz0123456789"].join(".");
+  const HOOK = "https://discord.com/api/webhooks/123456789012345678/" + "a".repeat(68);
+
+  it("blocks tokens and webhook URLs anywhere in the payload, also nested and in unknown keys", () => {
+    expect(shareSafety({ content: `hi ${TOKEN}` }).block.map((h) => h.path)).toEqual(["content"]);
+    expect(shareSafety({ embeds: [{ fields: [{ name: "a", value: HOOK }] }] }).block).toEqual([{ path: "embeds.0.fields.0.value", kind: "webhook" }]);
+    expect(shareSafety({ components: [{ custom: { deep: [TOKEN] } }] }).block[0]).toEqual({ path: "components.0.custom.deep.0", kind: "token" });
+    expect(shareSafety({ content: "discordapp.com/api/v10/webhooks/123456789012345678/abcdefghijklmnopqrstuvwxyz" }).block).toHaveLength(1);
+  });
+
+  it("strips and reports unknown keys that look like secrets", () => {
+    const r = shareSafety({ content: "hi", webhook_url: "x", embeds: [{ title: "t", api_token: "y", url_with_token: "z", secret: 1 }] });
+    expect(r.block).toEqual([]);
+    expect(r.warn.map((h) => h.path).sort()).toEqual(["embeds.0.api_token", "embeds.0.secret", "embeds.0.url_with_token", "webhook_url"]);
+    expect(r.payload).toEqual({ content: "hi", embeds: [{ title: "t" }] });
+  });
+
+  it("passes normal messages unchanged", () => {
+    const p = draftToPayload(getTemplate("rules", "de"));
+    expect(shareSafety(p)).toEqual({ block: [], warn: [], payload: p });
   });
 });
 

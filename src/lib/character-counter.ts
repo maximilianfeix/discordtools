@@ -77,6 +77,9 @@ export function countText(text: string): TextStats {
 
 // ---------------------------------------------------------------- splitting
 
+/** Longest fence language we carry over when a code block is reopened in the next chunk. */
+const MAX_FENCE_LANG = 24;
+
 interface Fence {
   open: boolean;
   lang: string;
@@ -87,16 +90,19 @@ function stepFence(f: Fence, line: string): Fence {
   if (count % 2 === 0) return f;
   if (f.open) return { open: false, lang: "" };
   const m = line.match(/```([\w+\-.]*)/);
-  return { open: true, lang: m?.[1] ?? "" };
+  const lang = m?.[1] ?? "";
+  // A "language" this long is not a real one; reopening with it could eat the whole chunk budget.
+  return { open: true, lang: lang.length <= MAX_FENCE_LANG ? lang : "" };
 }
 
 /** Cuts a line at the last space that fits, or hard at `budget` (never inside a surrogate pair). */
 function cutLine(line: string, budget: number): [string, string] {
+  budget = Math.max(2, Math.floor(budget));
   const sp = line.lastIndexOf(" ", budget);
   if (sp > budget * 0.5) return [line.slice(0, sp), line.slice(sp + 1)];
   let cut = budget;
   const code = line.charCodeAt(cut - 1);
-  if (code >= 0xd800 && code <= 0xdbff) cut--;
+  if (code >= 0xd800 && code <= 0xdbff && cut > 1) cut--;
   return [line.slice(0, cut), line.slice(cut)];
 }
 
@@ -120,6 +126,8 @@ export function splitMessage(text: string, opts: SplitOptions = {}): string[] {
   if (limit < 40) throw new Error("limit too small");
 
   const q = src.split("\n");
+  // limit ≥ 40 and prefix ≤ 3 + MAX_FENCE_LANG + 1, so a cut always has at least this much room.
+  const MIN_CUT = limit - (MAX_FENCE_LANG + 4) - 4;
   const chunks: string[] = [];
   let i = 0;
   let fence: Fence = { open: false, lang: "" };
@@ -147,8 +155,10 @@ export function splitMessage(text: string, opts: SplitOptions = {}): string[] {
       }
       if (body.length === 0) {
         // a single line longer than a chunk: cut it at a word boundary
-        const budget = limit - prefix.length - (st.open ? 4 : 0);
-        const [head, tail] = cutLine(line, budget);
+        const budget = Math.max(MIN_CUT, limit - prefix.length - (st.open ? 4 : 0));
+        let [head, tail] = cutLine(line, budget);
+        // Every iteration must consume input, otherwise the loop would never end.
+        if (!head.length) [head, tail] = [line.slice(0, budget), line.slice(budget)];
         body.push(head);
         states.push(st);
         lens.push(len + head.length);

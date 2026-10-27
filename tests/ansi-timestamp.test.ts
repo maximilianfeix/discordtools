@@ -38,3 +38,17 @@ describe("new timestamp styles", () => {
     expect(formatTimestamp(1618935630, "f", "en-GB", "UTC")).toBe("20 April 2021 at 16:20");
   });
 });
+
+describe("formatTimestamp range", () => {
+  it("returns 'Invalid Date' instead of throwing for out-of-range instants", () => {
+    for (const st of ["t", "T", "d", "D", "f", "F", "s", "S", "R"] as const) {
+      expect(() => formatTimestamp(9999999999999, st, "de-DE", "UTC")).not.toThrow();
+      expect(formatTimestamp(9999999999999, st, "de-DE", "UTC")).toBe("Invalid Date");
+    }
+    expect(formatTimestamp(0, "d", "de-DE", "UTC")).toBe("01.01.1970");
+  });
+  it("skips out-of-range tags", () => {
+    expect(parseTimestampTags("<t:9999999999999> <t:1700000000:R>").map((t) => t.unix)).toEqual([1700000000]);
+  });
+});
+

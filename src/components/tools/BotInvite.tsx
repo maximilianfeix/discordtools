@@ -6,7 +6,7 @@ import { toast } from "../ui/toast";
 import PermissionPicker from "./PermissionPicker";
 import { PARSE_ERRORS, parseBitfield } from "../../lib/bitfield";
 import { decodePermissions, presetValue } from "../../lib/permissions";
-import { SCOPES, buildInviteUrl, looksLikeToken, parseInviteUrl, type InviteState, type IssueCode } from "../../lib/bot-invite";
+import { SCOPES, buildInviteUrl, inviteHashParams, looksLikeToken, parseInviteUrl, type InviteState, type IssueCode } from "../../lib/bot-invite";
 import { readHash, writeHash } from "../../lib/hash-state";
 import "./BotInvite.css";
 
@@ -225,15 +225,7 @@ export default function BotInvite({ lang }: { lang: Lang }) {
 
   useEffect(() => {
     if (!touched.current) return;
-    const pr = parseBitfield(st.permissions);
-    writeHash({
-      client_id: /^\d+$/.test(st.clientId) ? st.clientId : null,
-      permissions: pr.ok && pr.value > 0n ? pr.value.toString() : null,
-      integration_type: st.integrationType === 1 ? "1" : null,
-      scope: st.scopes.join(" "),
-      guild_id: st.guildId || null,
-      disable_guild_select: st.disableGuildSelect ? "true" : null,
-    });
+    writeHash(inviteHashParams(st));
   }, [st]);
 
   const onIdInput = (raw: string) => {

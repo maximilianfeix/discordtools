@@ -237,3 +237,19 @@ export function parseInviteUrl(input: string): ParseInviteResult {
     },
   };
 }
+
+/**
+ * Secret-free state for `location.hash`. Only validated values are written: a token or webhook URL pasted into
+ * the client or guild field must never end up in the URL / browser history.
+ */
+export function inviteHashParams(st: InviteState): Record<string, string | null> {
+  const pr = parseBitfield(st.permissions);
+  return {
+    client_id: isSnowflake(st.clientId) ? st.clientId : null,
+    permissions: pr.ok && pr.value > 0n ? pr.value.toString() : null,
+    integration_type: st.integrationType === 1 ? "1" : null,
+    scope: st.scopes.filter((x) => /^[a-z0-9_.]+$/.test(x)).join(" "),
+    guild_id: isSnowflake(st.guildId) ? st.guildId : null,
+    disable_guild_select: st.disableGuildSelect ? "true" : null,
+  };
+}

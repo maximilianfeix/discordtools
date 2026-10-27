@@ -74,3 +74,27 @@ describe("splitMessage", () => {
     expect(chunks.length).toBe(Math.ceil(words(1500).length / 4000));
   });
 });
+
+describe("splitMessage robustness", () => {
+  it("terminates on a fence with a huge language tag (review repro)", () => {
+    const src = "```" + "a".repeat(1993) + "\n" + "x".repeat(30) + "\n```";
+    const chunks = splitMessage(src);
+    expect(chunks.length).toBeGreaterThan(0);
+    for (const c of chunks) expect(c.length).toBeLessThanOrEqual(2000);
+    expect(chunks.join("")).toContain("x".repeat(30));
+  }, 2000);
+
+  it("terminates on random fence-heavy input (fuzz)", () => {
+    let seed = 1234567;
+    const rnd = () => ((seed = (seed * 1103515245 + 12345) % 2 ** 31) / 2 ** 31);
+    const pieces = ["```", "```js", "```" + "z".repeat(500), "\n", " ", "word", "😀", "a".repeat(700), "b".repeat(2100), "\n\n"];
+    for (let n = 0; n < 60; n++) {
+      let s = "";
+      while (s.length < 6000) s += pieces[Math.floor(rnd() * pieces.length)]!;
+      for (const max of [40, 100, 2000]) {
+        const chunks = splitMessage(s, { max, numbered: rnd() < 0.3 && max > 50 });
+        for (const c of chunks) expect(c.length).toBeLessThanOrEqual(max);
+      }
+    }
+  }, 10000);
+});
