@@ -70,7 +70,7 @@ jobs:
         timeout-minutes: 5
         with:
           authkey: ${{ secrets.TS_AUTHKEY }}
-          args: --login-server=https://vpn.aquaris.dev --accept-dns=false --accept-routes=false
+          args: --login-server=https://vpn.aquaris.dev --accept-dns=false
           hostname: gh-discordtools-${{ github.run_id }}
           timeout: 1m
           retry: 3
