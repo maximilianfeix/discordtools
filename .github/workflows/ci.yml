@@ -62,11 +62,24 @@ jobs:
         with:
           name: site
           path: dist
+      # The server is reached through the own Headscale VPN, not public SSH. TS_AUTHKEY: reusable, ephemeral
+      # pre-auth key with tag:ci, which may only reach port 22 on tag:server.
+      - name: Connect to the VPN
+        if: steps.fresh.outputs.deploy == 'true'
+        uses: tailscale/github-action@v4
+        timeout-minutes: 5
+        with:
+          authkey: ${{ secrets.TS_AUTHKEY }}
+          args: --login-server=https://vpn.aquaris.dev --accept-dns=false
+          hostname: gh-discordtools-${{ github.run_id }}
+          timeout: 1m
+          retry: 3
+          ping: 100.64.0.1
       - name: Upload to the server
         id: upload
         if: steps.fresh.outputs.deploy == 'true'
         env:
-          SITE_HOST: ${{ secrets.SITE_HOST }}
+          SITE_HOST: 100.64.0.1   # aquaris in the tailnet
           SITE_SSH_KEY: ${{ secrets.SITE_SSH_KEY }}
           SITE_KNOWN_HOSTS: ${{ secrets.SITE_KNOWN_HOSTS }}
         run: |
@@ -76,6 +89,7 @@ jobs:
           install -m 700 -d ~/.ssh
           printf '%s\n' "$SITE_SSH_KEY" > ~/.ssh/site && chmod 600 ~/.ssh/site
           printf '%s\n' "$SITE_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          echo "$SITE_HOST ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF47uy20XdCvmXD/IQ652p473NilBsfvrnZ0lztxb/Az" >> ~/.ssh/known_hosts
           ssh_cmd="ssh -i $HOME/.ssh/site -o IdentitiesOnly=yes -o BatchMode=yes"
           # 1) Hashed assets first and never deleted here: pages still cached in a browser keep finding
           #    their old JS/CSS. --ignore-times rewrites every current asset so its mtime is fresh; a cron job
